@@ -1463,6 +1463,7 @@ ModelImporter:
     2300950: wall_panel_wood_trim_bottom_096
     2300952: wall_panel_wood_trim_bottom_097
     2300954: wall_panel_wood_trim_bottom_098
+    2300956: //RootNode
     3300000: floor_tile_2x009
     3300002: floor_tile_2x010
     3300004: floor_tile_2x011
@@ -1941,6 +1942,7 @@ ModelImporter:
     3300950: wall_panel_wood_trim_bottom_096
     3300952: wall_panel_wood_trim_bottom_097
     3300954: wall_panel_wood_trim_bottom_098
+    3300956: //RootNode
     4300000: floor_tile_2x009
     4300002: floor_tile_2x010
     4300004: floor_tile_2x011
@@ -2419,6 +2421,7 @@ ModelImporter:
     4300950: wall_panel_trim_2x033
     4300952: wall_panel_wood_trim_bottom_097
     4300954: wall_panel_wood_trim_bottom_098
+    4300956: env_hallway_01
   externalObjects: {}
   materials:
     importMaterials: 1
