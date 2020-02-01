@@ -61,3 +61,6 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 ProjectSettings/ProjectSettings.asset
+
+# .meta files that keeps popping up because git ignores .dlls
+*.dll.meta
