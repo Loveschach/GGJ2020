@@ -82,6 +82,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 			CharacterUpdate();
+
+			// Temp save and delete testing.
+			if( Input.GetButtonDown( "Fire3" ) ) {
+				SaveSystem.Save( FindObjectsOfType<Bug>() );
+			}
+
+			if ( Input.GetButtonDown( "Fire2" ) ) {
+				SaveSystem.Delete();
+			}
 		}
 
 
