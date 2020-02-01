@@ -1,18 +1,17 @@
 ﻿using UnityEngine;
 
-public static class SaveSystem
+public class SaveSystem : MonoBehaviour
 {
 	static string BUG_SAVE = "bug";
 	static string DAY_SAVE = "day";
-	static int MAX_DAYS = 7;
 	static int MAX_BUGS = 100;
-	static int currentDay;
-	public static void Save( Bug[] bugs ) {
+	public static void Save() {
+		Bug[] bugs = FindObjectsOfType<Bug>();
 		foreach( Bug bug in bugs ) {
 			PlayerPrefs.SetInt( BUG_SAVE + bug.ID, bug.logged == true ? 1 : 0 );
 		}
 
-		PlayerPrefs.SetInt( DAY_SAVE, currentDay );
+		PlayerPrefs.SetInt( DAY_SAVE, GameManager.CurrentDay );
 		PlayerPrefs.Save();
 	}
 
@@ -25,12 +24,7 @@ public static class SaveSystem
 	}
 
 	public static void Load() {
-		currentDay = PlayerPrefs.GetInt( DAY_SAVE );
-	}
-
-	public static void IncrementDay() {
-		Debug.Assert( currentDay < MAX_DAYS );
-		currentDay++;
+		GameManager.CurrentDay = PlayerPrefs.GetInt( DAY_SAVE );
 	}
 
 	public static bool GetLogged( int bugID ) {

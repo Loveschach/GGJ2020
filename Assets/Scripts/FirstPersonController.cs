@@ -85,7 +85,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 			// Temp save and delete testing.
 			if( Input.GetButtonDown( "Fire3" ) ) {
-				SaveSystem.Save( FindObjectsOfType<Bug>() );
+				SaveSystem.Save();
 			}
 
 			if ( Input.GetButtonDown( "Fire2" ) ) {
