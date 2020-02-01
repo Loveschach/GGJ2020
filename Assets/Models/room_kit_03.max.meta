@@ -1,0 +1,303 @@
+fileFormatVersion: 2
+guid: 98c4f056868d1ef48b5cf4f91ed23b81
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Box001
+    100002: floor_tile_1x1m
+    100004: floor_tile_1x2m
+    100006: floor_tile_2x003
+    100008: floor_tile_2x004
+    100010: floor_tile_2x005
+    100012: floor_tile_2x006
+    100014: floor_tile_2x007
+    100016: floor_tile_2x008
+    100018: floor_tile_2x1m
+    100020: floor_tile_2x2
+    100022: floor_tile_trim_003
+    100024: floor_tile_trim_004
+    100026: floor_tile_trim_005
+    100028: floor_tile_trim_006
+    100030: floor_tile_trim_007
+    100032: floor_tile_trim_008
+    100034: floor_tile_trim_01
+    100036: Model
+    100038: Object001
+    100040: //RootNode
+    100042: Wall Mesh (1)
+    100044: wall_panel_2x002
+    100046: wall_panel_2x004
+    100048: wall_panel_2x007
+    100050: wall_panel_2x011
+    100052: wall_panel_2x012
+    100054: wall_panel_2x013
+    100056: wall_panel_2x014
+    100058: wall_panel_2x015
+    100060: wall_panel_2x016
+    100062: wall_panel_2x017
+    100064: wall_panel_2x018
+    100066: wall_panel_2x019
+    100068: wall_panel_2x020
+    100070: wall_panel_trim_2x002
+    100072: wall_panel_trim_2x003
+    100074: wall_panel_trim_2x004
+    100076: wall_panel_trim_single
+    100078: wall_panel_wood_trim_002
+    100080: wall_panel_wood_trim_003
+    100082: wall_panel_wood_trim_01
+    400000: Box001
+    400002: floor_tile_1x1m
+    400004: floor_tile_1x2m
+    400006: floor_tile_2x003
+    400008: floor_tile_2x004
+    400010: floor_tile_2x005
+    400012: floor_tile_2x006
+    400014: floor_tile_2x007
+    400016: floor_tile_2x008
+    400018: floor_tile_2x1m
+    400020: floor_tile_2x2
+    400022: floor_tile_trim_003
+    400024: floor_tile_trim_004
+    400026: floor_tile_trim_005
+    400028: floor_tile_trim_006
+    400030: floor_tile_trim_007
+    400032: floor_tile_trim_008
+    400034: floor_tile_trim_01
+    400036: Model
+    400038: Object001
+    400040: //RootNode
+    400042: Wall Mesh (1)
+    400044: wall_panel_2x002
+    400046: wall_panel_2x004
+    400048: wall_panel_2x007
+    400050: wall_panel_2x011
+    400052: wall_panel_2x012
+    400054: wall_panel_2x013
+    400056: wall_panel_2x014
+    400058: wall_panel_2x015
+    400060: wall_panel_2x016
+    400062: wall_panel_2x017
+    400064: wall_panel_2x018
+    400066: wall_panel_2x019
+    400068: wall_panel_2x020
+    400070: wall_panel_trim_2x002
+    400072: wall_panel_trim_2x003
+    400074: wall_panel_trim_2x004
+    400076: wall_panel_trim_single
+    400078: wall_panel_wood_trim_002
+    400080: wall_panel_wood_trim_003
+    400082: wall_panel_wood_trim_01
+    2100000: No Name
+    2100002: 07 - Default
+    2100004: Wall
+    2100006: 08 - Default
+    2100008: 03 - Default
+    2100010: wall_wood_panel_01
+    2300000: Box001
+    2300002: floor_tile_1x1m
+    2300004: floor_tile_1x2m
+    2300006: floor_tile_2x003
+    2300008: floor_tile_2x004
+    2300010: floor_tile_2x005
+    2300012: floor_tile_2x006
+    2300014: floor_tile_2x007
+    2300016: floor_tile_2x008
+    2300018: floor_tile_2x1m
+    2300020: floor_tile_2x2
+    2300022: floor_tile_trim_003
+    2300024: floor_tile_trim_004
+    2300026: floor_tile_trim_005
+    2300028: floor_tile_trim_006
+    2300030: floor_tile_trim_007
+    2300032: floor_tile_trim_008
+    2300034: floor_tile_trim_01
+    2300036: Object001
+    2300038: Wall Mesh (1)
+    2300040: wall_panel_2x002
+    2300042: wall_panel_2x004
+    2300044: wall_panel_2x007
+    2300046: wall_panel_2x011
+    2300048: wall_panel_2x012
+    2300050: wall_panel_2x013
+    2300052: wall_panel_2x014
+    2300054: wall_panel_2x015
+    2300056: wall_panel_2x016
+    2300058: wall_panel_2x017
+    2300060: wall_panel_2x018
+    2300062: wall_panel_2x019
+    2300064: wall_panel_2x020
+    2300066: wall_panel_trim_2x002
+    2300068: wall_panel_trim_2x003
+    2300070: wall_panel_trim_2x004
+    2300072: wall_panel_trim_single
+    2300074: wall_panel_wood_trim_002
+    2300076: wall_panel_wood_trim_003
+    2300078: wall_panel_wood_trim_01
+    3300000: Box001
+    3300002: floor_tile_1x1m
+    3300004: floor_tile_1x2m
+    3300006: floor_tile_2x003
+    3300008: floor_tile_2x004
+    3300010: floor_tile_2x005
+    3300012: floor_tile_2x006
+    3300014: floor_tile_2x007
+    3300016: floor_tile_2x008
+    3300018: floor_tile_2x1m
+    3300020: floor_tile_2x2
+    3300022: floor_tile_trim_003
+    3300024: floor_tile_trim_004
+    3300026: floor_tile_trim_005
+    3300028: floor_tile_trim_006
+    3300030: floor_tile_trim_007
+    3300032: floor_tile_trim_008
+    3300034: floor_tile_trim_01
+    3300036: Object001
+    3300038: Wall Mesh (1)
+    3300040: wall_panel_2x002
+    3300042: wall_panel_2x004
+    3300044: wall_panel_2x007
+    3300046: wall_panel_2x011
+    3300048: wall_panel_2x012
+    3300050: wall_panel_2x013
+    3300052: wall_panel_2x014
+    3300054: wall_panel_2x015
+    3300056: wall_panel_2x016
+    3300058: wall_panel_2x017
+    3300060: wall_panel_2x018
+    3300062: wall_panel_2x019
+    3300064: wall_panel_2x020
+    3300066: wall_panel_trim_2x002
+    3300068: wall_panel_trim_2x003
+    3300070: wall_panel_trim_2x004
+    3300072: wall_panel_trim_single
+    3300074: wall_panel_wood_trim_002
+    3300076: wall_panel_wood_trim_003
+    3300078: wall_panel_wood_trim_01
+    4300000: Box001
+    4300002: floor_tile_1x2m
+    4300004: Wall Mesh (1)
+    4300006: floor_tile_2x2
+    4300008: floor_tile_2x1m
+    4300010: floor_tile_1x1m
+    4300012: wall_panel_2x002
+    4300014: wall_panel_2x004
+    4300016: floor_tile_2x003
+    4300018: floor_tile_2x004
+    4300020: floor_tile_trim_01
+    4300022: floor_tile_trim_003
+    4300024: floor_tile_2x005
+    4300026: floor_tile_2x006
+    4300028: floor_tile_2x007
+    4300030: floor_tile_2x008
+    4300032: floor_tile_trim_004
+    4300034: floor_tile_trim_005
+    4300036: wall_panel_2x007
+    4300038: wall_panel_2x011
+    4300040: wall_panel_trim_2x002
+    4300042: floor_tile_trim_006
+    4300044: floor_tile_trim_007
+    4300046: floor_tile_trim_008
+    4300048: wall_panel_2x012
+    4300050: wall_panel_2x013
+    4300052: wall_panel_2x014
+    4300054: wall_panel_2x015
+    4300056: wall_panel_2x016
+    4300058: wall_panel_2x017
+    4300060: wall_panel_2x018
+    4300062: wall_panel_trim_2x003
+    4300064: wall_panel_wood_trim_01
+    4300066: wall_panel_wood_trim_002
+    4300068: wall_panel_wood_trim_003
+    4300070: wall_panel_trim_single
+    4300072: wall_panel_2x019
+    4300074: wall_panel_2x020
+    4300076: wall_panel_trim_2x004
+    4300078: Object001
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
