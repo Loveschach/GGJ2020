@@ -17,8 +17,10 @@ public class CycleRandomTextures : MonoBehaviour
     IEnumerator AssignRandomTextures()
     {
 		foreach (Renderer renderer in renderers) {
-			renderer.material.SetTexture("Texture", textures[Random.Range(0, textures.Length)]);
-			yield return new WaitForSeconds(Random.Range(minRandTime, maxRandTime));
+			renderer.material.EnableKeyword("_MainTex");
+			renderer.material.SetTexture("_MainTex", textures[Random.Range(0, textures.Length)]);
+			yield return new WaitForEndOfFrame();
 		}
-    }
+		StartCoroutine("AssignRandomTextures");
+	}
 }
