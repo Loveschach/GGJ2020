@@ -7,17 +7,22 @@ public class Enemy : MonoBehaviour
 	GameObject player;
 	bool moving = false;
 
+	public bool moveOnSpawn;
 	public bool seekPlayer;
 	public float speed;
+	public bool spawned;
 
 	public AudioClip[] audioClips;
 	AudioSource audioSource;
+
+	Vector3 startDirection;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find( "Player" );
 		audioSource = GetComponent<AudioSource>();
+		startDirection = transform.forward;
     }
 
     // Update is called once per frame
@@ -41,6 +46,9 @@ public class Enemy : MonoBehaviour
     	if ( moving )
     		return false;
 
+    	if ( moveOnSpawn )
+    		return true;
+
     	RaycastHit hit;
 
     	Physics.Raycast( transform.position, player.transform.position - transform.position, out hit, 100 );
@@ -61,9 +69,10 @@ public class Enemy : MonoBehaviour
 		//Spooky ghost shounds
 		Utils.PlayRandomAudio( audioSource, audioClips );
 
-    	yield return new WaitForSeconds( 0.5f );
+		if ( !moveOnSpawn )
+    		yield return new WaitForSeconds( 0.5f );
 
-    	var direction = transform.forward;
+    	var direction = startDirection;
     	if ( seekPlayer )
     		direction = player.transform.position - transform.position + new Vector3( 0, 2, 0 );
 
@@ -71,7 +80,7 @@ public class Enemy : MonoBehaviour
 
     	var interval = 0.05f;
 
-    	for ( int i = 0; i < 1000; i++ )
+    	for ( int i = 0; i < 100; i++ )
     	{
 			if (!audioSource.isPlaying) {
 				Utils.PlayRandomAudio(audioSource, audioClips);
@@ -79,5 +88,8 @@ public class Enemy : MonoBehaviour
 			transform.position += direction * speed * interval;
     		yield return new WaitForSeconds( interval );
     	}
+
+    	if ( spawned )
+    		Destroy( gameObject );
     }
 }
