@@ -16,6 +16,8 @@ public class PlayerDeath : MonoBehaviour
 	public AudioClip[] deathSounds;
 	AudioSource audioSource;
 
+    Level level;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +25,15 @@ public class PlayerDeath : MonoBehaviour
         checkpoint = transform.position;
         og_checkpoint = checkpoint;
 		audioSource = GetComponent<AudioSource>();
+        level = GameObject.Find( "Level" ).GetComponent<Level>();
     }
 
     // Update is called once per frame
     void OnTriggerEnter( Collider other )
     {
+        if ( level.complete )
+            return;
+            
     	var trigger = other.GetComponent<CheckpointTrigger>();
         if ( trigger != null )
         {

@@ -1089,7 +1089,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: YOUR FINAL GAMEJUDGEY SCORE IS
+  m_Text: "Your Final GameJudgey \nScore is"
 --- !u!222 &1812072009
 CanvasRenderer:
   m_ObjectHideFlags: 0

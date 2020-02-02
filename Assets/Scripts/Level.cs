@@ -5,6 +5,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
 	public CharacterController playerController;
+	public bool complete = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,6 @@ public class Level : MonoBehaviour
 
     public void Reset( bool playerDied )
     {
-    	
+    	complete = false;
     }
 }
