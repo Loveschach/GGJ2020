@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
 	static int MAX_DAYS = 5;
 	static int SPLASH_TIMER = 1;
 	static int TUTORIAL_MESSAGE_DURATION = 1;
+	static int LEVEL_TIME = 180;
+	static int LEVEL_START_TIME = 8;
+	static int LEVEL_END_TIME = 20;
 	public static int CurrentDay = 1;
 	enum GameState {
 		DAY_SPLASH,
@@ -16,8 +19,8 @@ public class GameManager : MonoBehaviour
 		EVAL,
 		FINAL,
 	};
-	GameState currentState;
-	float currentTime;
+	static GameState currentState;
+	static float currentTime;
 	public GameObject splashScreen;
 	List<string[]> tutorialText = new List<string[]>();
 	float tutorialTimer = 0;
@@ -40,6 +43,19 @@ public class GameManager : MonoBehaviour
 		string[] day5TutorialStrings = { "TUTORIAL_5a" };
 		tutorialText.Add( day5TutorialStrings );
 		chatBox = canvas.GetComponent<ChatBox>();
+	}
+
+	public static string GetTime() {
+		if ( currentState == GameState.DAY_SPLASH || currentState == GameState.TUTORIAL ) {
+			return LEVEL_START_TIME.ToString( "00" ) + ":00";
+		} else {
+			float percentDone = currentTime / LEVEL_TIME;
+			float timeProgress = ( LEVEL_END_TIME - LEVEL_START_TIME ) * percentDone;
+			string hour = "" + ( Mathf.Floor( timeProgress ) + LEVEL_START_TIME ).ToString( "00" );
+			float minutePercent = timeProgress - Mathf.Floor( timeProgress );
+			string minute = "" + Mathf.Floor( minutePercent * 60 ).ToString( "00" );
+			return hour + ":" + minute;
+		}
 	}
 
 	void UpdateSplashState() {
@@ -73,6 +89,10 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	void EnterTesting() {
+		currentTime = 0;
+	}
+
 	void EnterState( GameState newState ) {
 		switch( newState ) {
 			case ( GameState.DAY_SPLASH ):
@@ -80,6 +100,9 @@ public class GameManager : MonoBehaviour
 				break;
 			case ( GameState.TUTORIAL ):
 				EnterTutorial();
+				break;
+			case ( GameState.TESTING ):
+				EnterTesting();
 				break;
 			default:
 				break;

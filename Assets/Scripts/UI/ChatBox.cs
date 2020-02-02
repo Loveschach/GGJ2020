@@ -23,6 +23,7 @@ public class ChatBox : MonoBehaviour
 	public Image profilePic;
 	public Text chatterName;
 	public Text chatterTitle;
+	public Text time;
 	public GameObject chatPanel;
 
 	public Sprite[] ProfilePics;
@@ -117,5 +118,7 @@ public class ChatBox : MonoBehaviour
 			}
 			currentTime += Time.deltaTime;
 		}
+
+		time.text = GameManager.GetTime();
     }
 }
