@@ -5,7 +5,9 @@ using UnityEngine;
 public static class Strings {
 	public static Dictionary<string, string> GameStrings = new Dictionary<string, string>()
 	{
-		{ "TEST", "This is a test string." },
+		{ "TEST", "Devin." },
+		{ "TEST1", "You are a cool guy." },
+		{ "TEST2", "Amanda is cool too, and Josh, and Nathan." },
 		{ "QA_LEAD_NAME", "Pesticide" },
 		{ "QA_LEAD_TITLE", "QA Lead (Your Boss)" },
 		{ "DESIGNER_NAME", "Rock Blockster" },
