@@ -16,10 +16,11 @@ public class Level : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if ( Input.GetKeyDown( "r" ) )
+        	Reset();
     }
 
-    public void Reset( bool playerDied )
+    public void Reset( bool playerDied = false )
     {
     	complete = false;
     }

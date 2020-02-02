@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour
 	public bool seekPlayer;
 	public float speed;
 	public bool spawned;
+	public LayerMask traceMask;
 
 	public AudioClip[] audioClips;
 	AudioSource audioSource;
@@ -51,7 +52,7 @@ public class Enemy : MonoBehaviour
 
     	RaycastHit hit;
 
-    	Physics.Raycast( transform.position, player.transform.position - transform.position, out hit, 100 );
+    	Physics.Raycast( transform.position, player.transform.position - transform.position, out hit, 100, traceMask );
 
     	if ( hit.transform == null )
     		return false;
