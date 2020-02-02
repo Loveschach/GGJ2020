@@ -16,13 +16,19 @@ public class Enemy : MonoBehaviour
 	public AudioClip[] audioClips;
 	AudioSource audioSource;
 
+	Vector3 startPosition;
 	Vector3 startDirection;
+
+	Level level;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find( "Player" );
+        level = GameObject.Find( "Level" ).GetComponent<Level>();
+        level.AddEnemy( this );
 		audioSource = GetComponent<AudioSource>();
+		startPosition = transform.position;
 		startDirection = transform.forward;
     }
 
@@ -91,6 +97,9 @@ public class Enemy : MonoBehaviour
     	}
 
     	if ( spawned )
+    	{
+    		level.RemoveEnemy( this );
     		Destroy( gameObject );
+    	}
     }
 }

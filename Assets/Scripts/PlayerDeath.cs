@@ -33,11 +33,12 @@ public class PlayerDeath : MonoBehaviour
     {
         if ( level.complete )
             return;
-            
+
     	var trigger = other.GetComponent<CheckpointTrigger>();
         if ( trigger != null )
         {
         	checkpoint = trigger.checkpoint;
+            level.Checkpoint();
         	return;
         }
 
@@ -64,6 +65,7 @@ public class PlayerDeath : MonoBehaviour
     	yield return new WaitForSeconds( 0.5f );
 
     	controller.transform.position = checkpoint;
+        level.Reset( true );
 
     	yield return new WaitForSeconds( 0.2f );
 
@@ -90,5 +92,15 @@ public class PlayerDeath : MonoBehaviour
     void SetAlpha( Image screen, float alpha )
     {
     	screen.color = new Color( screen.color.r, screen.color.g, screen.color.b, alpha );
+    }
+
+    public Vector3 GetStartPosition()
+    {
+        return og_checkpoint;
+    }
+
+    public void Reset()
+    {
+        checkpoint = og_checkpoint;
     }
 }
