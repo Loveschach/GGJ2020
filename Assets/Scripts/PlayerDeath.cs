@@ -13,12 +13,16 @@ public class PlayerDeath : MonoBehaviour
 	public Image deathScreen;
 	public Image hurtScreen;
 
+	public AudioClip[] deathSounds;
+	AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
     	controller = GetComponent<FirstPersonController>();
         checkpoint = transform.position;
         og_checkpoint = checkpoint;
+		audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +47,8 @@ public class PlayerDeath : MonoBehaviour
     	controller.enabled = false;
 
     	StartCoroutine( LerpAlpha( hurtScreen, 0.5f, 1f ) );
+
+		Utils.PlayRandomAudio(audioSource, deathSounds);
 
     	yield return new WaitForSeconds( 0.5f );
 
