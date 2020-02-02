@@ -16,7 +16,7 @@ public class Bug : MonoBehaviour {
 	public LogStatus status = LogStatus.Future;
 	public int buildIntroduced = 0; // one build per day
 	public int ID;
-	public string completionStringKey;
+	public string[] CompletionStrings;
 	public string failedStringKey;
 	public ChatBox.Chatters chatter;
 
@@ -78,6 +78,9 @@ public class Bug : MonoBehaviour {
 			material.SetFloat("_Alpha", 1);
 		}
 
+		if( logged ) {
+			ChatBox.QueueTexts( CompletionStrings, 3, chatter );
+		}
 		//Save logged state for next day
 		SaveSystem.Save();
 	}
