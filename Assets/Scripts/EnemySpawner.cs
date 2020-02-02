@@ -9,17 +9,24 @@ public class EnemySpawner : MonoBehaviour
     public float spawnRate = 2f;
     public float spawnOffset;
 
-    float nextSpawnTime = 0f;
+    float nextSpawnTime;
 	
     // Start is called before the first frame update
     void Start()
     {
-        nextSpawnTime += spawnOffset;
+        
     }
+
+    bool wasActive = false;
 
     // Update is called once per frame
     void Update()
     {
+        if ( active && !wasActive )
+            nextSpawnTime = Time.time + spawnOffset;
+
+        wasActive = active;
+        
         if ( active && Time.time >= nextSpawnTime )
         {
             Enemy enemy = Instantiate( enemyPrefab, transform.position, transform.rotation ).GetComponent<Enemy>();
