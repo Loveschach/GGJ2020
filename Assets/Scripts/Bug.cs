@@ -37,6 +37,7 @@ public class Bug : MonoBehaviour {
 		this.logged = logged;
 		material.SetColor( "_OutlineColor", loggedColor );
 		material.SetFloat( "_OutlineExtrusion", highlightThickness );
+		material.SetFloat("_Alpha", 1);
 	}
 
 	public void SetHighlight() {
@@ -44,11 +45,13 @@ public class Bug : MonoBehaviour {
 			material.SetColor( "_OutlineColor", highlightColor );
 		}
 		material.SetFloat( "_OutlineExtrusion", highlightThickness );
+		material.SetFloat("_Alpha", 1);
 	}
 
 	public void ClearHighlight() {
 		if ( !logged ) {
 			material.SetFloat( "_OutlineExtrusion", 0 );
+			material.SetFloat("_Alpha", 0);
 		}
 	}
 }
