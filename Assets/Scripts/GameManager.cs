@@ -71,7 +71,10 @@ public class GameManager : MonoBehaviour
 	}
 
 	void UpdateTesting() {
-		if ( currentTime >= LEVEL_END_TIME ) {
+		float percentDone = currentTime / LEVEL_TIME;
+		float timeProgress = ( LEVEL_END_TIME - LEVEL_START_TIME ) * percentDone;
+		float hour = ( Mathf.Floor( timeProgress ) + LEVEL_START_TIME );
+		if ( hour >= LEVEL_END_TIME ) {
 			EnterState( GameState.NEXT );
 		}
 	}
