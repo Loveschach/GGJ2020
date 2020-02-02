@@ -16,6 +16,9 @@ public class Bug : MonoBehaviour {
 	public LogStatus status = LogStatus.Future;
 	public int buildIntroduced = 0; // one build per day
 	public int ID;
+	public string completionStringKey;
+	public string failedStringKey;
+	public ChatBox.Chatters chatter;
 
 	//Highlight variables
 	Material material;
