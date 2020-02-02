@@ -34,6 +34,8 @@ public class FinalEval : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
 		splash1.SetActive( true );
 		splash2.SetActive( false );
 		splash3.SetActive( false );
