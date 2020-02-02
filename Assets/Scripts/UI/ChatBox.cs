@@ -34,7 +34,8 @@ public class ChatBox : MonoBehaviour
 	}
 	Queue<ChatMessage> chatQueue = new Queue<ChatMessage>();
 	List<GameObject> chatObjects = new List<GameObject>();
-	float currentTime = -1;
+	float currentTime = 0;
+	bool messagePlaying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -54,9 +55,6 @@ public class ChatBox : MonoBehaviour
 		chatterData[( int )Chatters.ARTIST].name = Strings.GetString( "ARTIST_NAME" );
 		chatterData[( int )Chatters.ARTIST].title = Strings.GetString( "ARTIST_TITLE" );
 		chatterData[( int )Chatters.ARTIST].pic = ProfilePics[( int )Chatters.ARTIST];
-		QueueText( Strings.GetString( "TEST" ), 3, Chatters.QA_LEAD );
-		QueueText( Strings.GetString( "TEST1" ), 3, Chatters.DESIGNER );
-		QueueText( Strings.GetString( "TEST2" ), 3, Chatters.ENGINEER );
 	}
 
 	public void QueueText( string text, int duration, Chatters chatter ) {
@@ -106,17 +104,18 @@ public class ChatBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if( chatQueue.Count > 0 ) {
+		if ( chatQueue.Count > 0 ) {
 			if ( chatQueue.Count > 1 && currentTime >= chatQueue.Peek().duration ) {
 				currentTime = 0;
 				chatQueue.Dequeue();
 				PlayMessage( chatQueue.Peek() );
-			} else if ( currentTime == -1 ) {
+			}
+			else if ( !messagePlaying ) {
 				currentTime = 0;
 				PlayMessage( chatQueue.Peek() );
+				messagePlaying = true;
 			}
+			currentTime += Time.deltaTime;
 		}
-
-		currentTime += Time.deltaTime;
     }
 }
