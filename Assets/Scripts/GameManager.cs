@@ -7,25 +7,23 @@ public class GameManager : MonoBehaviour
 {
 	static int MAX_DAYS = 5;
 	static int SPLASH_TIMER = 1;
-	static int TUTORIAL_MESSAGE_DURATION = 1;
+	static int TUTORIAL_MESSAGE_DURATION = 2;
 	static int LEVEL_TIME = 180;
 	static int LEVEL_START_TIME = 8;
 	static int LEVEL_END_TIME = 20;
 	public static int CurrentDay = 1;
-	enum GameState {
+	public enum GameState {
 		DAY_SPLASH,
 		TUTORIAL,
 		TESTING,
 		EVAL,
 		FINAL,
 	};
-	static GameState currentState;
+	public static GameState CurrentState;
 	static float currentTime;
 	public GameObject splashScreen;
 	List<string[]> tutorialText = new List<string[]>();
 	float tutorialTimer = 0;
-	public Canvas canvas;
-	ChatBox chatBox;
 
 
 	// Start is called before the first frame update
@@ -42,11 +40,10 @@ public class GameManager : MonoBehaviour
 		tutorialText.Add( day4TutorialStrings );
 		string[] day5TutorialStrings = { "TUTORIAL_5a" };
 		tutorialText.Add( day5TutorialStrings );
-		chatBox = canvas.GetComponent<ChatBox>();
 	}
 
 	public static string GetTime() {
-		if ( currentState == GameState.DAY_SPLASH || currentState == GameState.TUTORIAL ) {
+		if ( CurrentState == GameState.DAY_SPLASH || CurrentState == GameState.TUTORIAL ) {
 			return LEVEL_START_TIME.ToString( "00" ) + ":00";
 		} else {
 			float percentDone = currentTime / LEVEL_TIME;
@@ -84,7 +81,7 @@ public class GameManager : MonoBehaviour
 		string[] tutorialStrings = tutorialText[CurrentDay - 1];
 		tutorialTimer = 0;
 		foreach( string tutorial in tutorialStrings ) {
-			chatBox.QueueText( Strings.GetString( tutorial ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+			ChatBox.QueueText( Strings.GetString( tutorial ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
 			tutorialTimer += TUTORIAL_MESSAGE_DURATION;
 		}
 	}
@@ -107,11 +104,11 @@ public class GameManager : MonoBehaviour
 			default:
 				break;
 		}
-		currentState = newState;
+		CurrentState = newState;
 	}
 
 	void UpdateState() {
-		switch ( currentState ) {
+		switch ( CurrentState ) {
 			case ( GameState.DAY_SPLASH ):
 				UpdateSplashState();
 				break;

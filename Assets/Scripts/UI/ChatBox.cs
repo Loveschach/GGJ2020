@@ -33,7 +33,7 @@ public class ChatBox : MonoBehaviour
 		public Chatters chatter;
 		public string text;
 	}
-	Queue<ChatMessage> chatQueue = new Queue<ChatMessage>();
+	static Queue<ChatMessage> chatQueue = new Queue<ChatMessage>();
 	List<GameObject> chatObjects = new List<GameObject>();
 	float currentTime = 0;
 	bool messagePlaying = false;
@@ -58,7 +58,7 @@ public class ChatBox : MonoBehaviour
 		chatterData[( int )Chatters.ARTIST].pic = ProfilePics[( int )Chatters.ARTIST];
 	}
 
-	public void QueueText( string text, int duration, Chatters chatter ) {
+	public static void QueueText( string text, int duration, Chatters chatter ) {
 		ChatMessage message = new ChatMessage();
 		message.text = text;
 		message.duration = duration;
@@ -105,6 +105,10 @@ public class ChatBox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		// No text in splash state
+		if ( GameManager.CurrentState == GameManager.GameState.DAY_SPLASH )
+			return;
+
 		if ( chatQueue.Count > 0 ) {
 			if ( chatQueue.Count > 1 && currentTime >= chatQueue.Peek().duration ) {
 				currentTime = 0;
