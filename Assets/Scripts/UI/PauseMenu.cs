@@ -19,7 +19,8 @@ public class PauseMenu : MonoBehaviour
 	}
 
 	public void EndLevel() {
-		//TODO: Stub
+		GameManager.EndLevel();
+		Resume();
 	}
 
 	public void Exit() {

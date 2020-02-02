@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
+		currentTime = 0;
 		EnterState( GameState.DAY_SPLASH );
 		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b", "TUTORIAL_1c", "TUTORIAL_1d", "TUTORIAL_1e", "TUTORIAL_1f", "TUTORIAL_1g", "TUTORIAL_1h", "TUTORIAL_1i" };
 		tutorialText.Add( day1TutorialStrings );
@@ -76,6 +77,8 @@ public class GameManager : MonoBehaviour
 	}
 
 	void EnterSplash() {
+		currentTime = 0;
+		tutorialTimer = 0;
 		splashScreen.SetActive( true );
 		GameObject currentDate = GameObject.Find( "Date" );
 		GameObject daysRemaining = GameObject.Find( "DaysRemaining" );
@@ -92,10 +95,15 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
-	void EnterNext() {
+	static void EnterNext() {
 		CurrentDay += 1;
+		ChatBox.ClearQueue();
 		SaveSystem.Save();
 		SceneManager.LoadScene( CurrentDay );
+	}
+
+	public static void EndLevel() {
+		EnterNext();
 	}
 
 	void EnterTesting() {

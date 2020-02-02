@@ -1037,7 +1037,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: End Level
+  m_Text: End Day
 --- !u!1 &4538656769182621666
 GameObject:
   m_ObjectHideFlags: 0

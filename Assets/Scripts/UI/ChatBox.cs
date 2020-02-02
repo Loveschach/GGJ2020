@@ -108,6 +108,10 @@ public class ChatBox : MonoBehaviour
 		chatObjects.Add( newChat );
 	}
 
+	public static void ClearQueue() {
+		chatQueue.Clear();
+	}
+
     // Update is called once per frame
     void Update()
     {
