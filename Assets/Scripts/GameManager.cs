@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	static int MAX_DAYS = 5;
 	static int SPLASH_TIMER = 1;
-	static int TUTORIAL_MESSAGE_DURATION = 2;
+	static int TUTORIAL_MESSAGE_DURATION = 3;
 	static int LEVEL_TIME = 180;
 	static int LEVEL_START_TIME = 8;
 	static int LEVEL_END_TIME = 20;
