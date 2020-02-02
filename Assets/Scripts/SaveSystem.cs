@@ -2,9 +2,9 @@
 
 public class SaveSystem : MonoBehaviour
 {
-	static string BUG_SAVE = "bug";
+	public static string BUG_SAVE = "bug";
 	static string DAY_SAVE = "day";
-	static int MAX_BUGS = 100;
+	public static int MAX_BUGS = 100;
 	public static void Save() {
 		Bug[] bugs = FindObjectsOfType<Bug>();
 		foreach( Bug bug in bugs ) {
