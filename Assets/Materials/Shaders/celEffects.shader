@@ -8,6 +8,7 @@
 		_OutlineExtrusion("Outline Extrusion", float) = 0
 		_OutlineColor("Outline Color", Color) = (1, 1, 0, 1)
 		_OutlineDot("Outline Dot", float) = 0.25
+		_Alpha("Alpha", Float) = 1 //does nothing, just here so we don't have to change logic for Outliner.shader
 	}
 
 	SubShader
