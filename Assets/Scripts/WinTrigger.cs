@@ -19,4 +19,9 @@ public class WinTrigger : MonoBehaviour
     {
     	screen.color = new Color( screen.color.r, screen.color.g, screen.color.b, alpha );
     }
+
+    public void Reset()
+    {
+    	SetAlpha( winScreen, 0 );
+    }
 }
