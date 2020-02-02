@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 2215219797614548558}
   - component: {fileID: 2215219797614548559}
   - component: {fileID: 4521775331717661383}
-  - component: {fileID: 2139865023128631629}
   m_Layer: 0
   m_Name: highlight
   m_TagString: Untagged
@@ -173,27 +172,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 2.5, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2139865023128631629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2215219797614548554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0e577aa02a99854dbc9574989610ac4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  logged: 0
-  status: 0
-  buildIntroduced: 0
-  ID: 0
-  highlightThickness: 0.1
-  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  loggedColor: {r: 1, g: 0, b: 0, a: 1}
-  m_broken: {fileID: 7219590571300197440}
-  m_fixed: {fileID: 5832213274974926709}
 --- !u!1 &2584798885550040845
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +280,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6224478419624841028}
+  - component: {fileID: 6319080834229183966}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -325,6 +304,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6319080834229183966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4203882093700220466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0e577aa02a99854dbc9574989610ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logged: 0
+  status: 0
+  buildIntroduced: 0
+  ID: 0
+  completionStringKey: 
+  failedStringKey: 
+  chatter: 0
+  supportedOutlineShaders:
+  - {fileID: 4800000, guid: f637b0c48b2eeed488996eb63d5301fe, type: 3}
+  - {fileID: 4800000, guid: d01d468fa9c736a47866b54627dc06d6, type: 3}
+  highlightThickness: 0.1
+  highlightColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  loggedColor: {r: 1, g: 0, b: 0, a: 1}
+  m_broken: {fileID: 7219590571300197440}
+  m_fixed: {fileID: 5832213274974926709}
 --- !u!1 &5832213274974926709
 GameObject:
   m_ObjectHideFlags: 0
