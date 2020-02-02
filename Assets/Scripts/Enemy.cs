@@ -10,10 +10,14 @@ public class Enemy : MonoBehaviour
 	public bool seekPlayer;
 	public float speed;
 
+	public AudioClip[] audioClips;
+	AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find( "Player" );
+		audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -54,7 +58,8 @@ public class Enemy : MonoBehaviour
     {
     	moving = true;
 
-    	// TODO: ghost screech
+		Utils.PlayRandomAudio( audioSource, audioClips );
+
     	yield return new WaitForSeconds( 0.5f );
 
     	var direction = transform.forward;
