@@ -46,10 +46,9 @@ public class BugDetector : MonoBehaviour
 
 	void DetectiveModeUpdate() {
 		RaycastHit hit;
-		//Debug.DrawRay(camTrans.position, camTrans.TransformDirection(Vector3.forward) * 100, Color.yellow);
 		// Does the ray intersect any buggable objects?
 		if (Physics.Raycast(camTrans.position, camTrans.TransformDirection(Vector3.forward), out hit, Mathf.Infinity)) {
-			Bug bug = hit.collider.GetComponent<Bug>();
+			Bug bug = hit.collider.GetComponentInParent<Bug>();
 			if (bug != null && !bug.logged) {
 				// If it's different, unhighlight the last thing, and highlight this thing
 				if (lastBug != bug) {

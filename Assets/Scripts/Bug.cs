@@ -21,7 +21,8 @@ public class Bug : MonoBehaviour {
 	public ChatBox.Chatters chatter;
 
 	//Highlight variables
-	Material material;
+	public Shader[] supportedOutlineShaders;
+	List<Material> materials;
 	public float highlightThickness = 0.1f;
 	public Color highlightColor = Color.yellow;
 	public Color loggedColor = Color.red;
@@ -32,10 +33,22 @@ public class Bug : MonoBehaviour {
 
 	// Start is called before the first frame update
 	void Start() {
-		Renderer renderer = GetComponent<Renderer>();
-		if (renderer != null) {
-			material = renderer.material;
+		materials = new List<Material>();
+
+		//Get materials that can highlight
+		Renderer[] renderers = GetComponentsInChildren<Renderer>();
+		foreach (Renderer renderer in renderers) {
+			foreach (Material material in renderer.materials) {
+				Debug.Log(material.shader);
+				foreach (Shader shader in supportedOutlineShaders) {
+					Debug.Log(shader);
+					if (material.shader == shader) {
+						materials.Add(material);
+					}
+				}
+			}
 		}
+		//materials = GetComponentsInChildren<Material>();
 
 		logged = SaveSystem.GetLogged( ID );
 		UpdateFixState();
@@ -59,9 +72,11 @@ public class Bug : MonoBehaviour {
 
 	public void SetLogged( bool logged ) {
 		this.logged = logged;
-		material.SetColor( "_OutlineColor", loggedColor );
-		material.SetFloat( "_OutlineExtrusion", highlightThickness );
-		material.SetFloat("_Alpha", 1);
+		foreach (Material material in materials) {
+			material.SetColor("_OutlineColor", loggedColor);
+			material.SetFloat("_OutlineExtrusion", highlightThickness);
+			material.SetFloat("_Alpha", 1);
+		}
 
 		//Save logged state for next day
 		SaveSystem.Save();
@@ -69,16 +84,20 @@ public class Bug : MonoBehaviour {
 
 	public void SetHighlight() {
 		if ( !logged ) {
-			material.SetColor( "_OutlineColor", highlightColor );
-			material.SetFloat( "_OutlineExtrusion", highlightThickness );
-			material.SetFloat("_Alpha", 1);
+			foreach (Material material in materials) {
+				material.SetColor("_OutlineColor", highlightColor);
+				material.SetFloat("_OutlineExtrusion", highlightThickness);
+				material.SetFloat("_Alpha", 1);
+			}
 		}
 	}
 
 	public void ClearHighlight() {
 		if ( !logged ) {
-			material.SetFloat( "_OutlineExtrusion", 0 );
-			material.SetFloat("_Alpha", 0);
+			foreach (Material material in materials) {
+				material.SetFloat("_OutlineExtrusion", 0);
+				material.SetFloat("_Alpha", 0);
+			}
 		}
 	}
 }
