@@ -8,6 +8,8 @@ ModelImporter:
     2100000: wall_wood_panel_01
     2100002: 07 - Default
     2100004: 08 - Default
+    2100006: 03 - Default
+    2100008: floor_carpet_02
     2300000: //RootNode
     3300000: //RootNode
     4300000: env_final_room
