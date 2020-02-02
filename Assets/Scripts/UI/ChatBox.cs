@@ -68,6 +68,7 @@ public class ChatBox : MonoBehaviour
 	}
 
 	void MoveChatsUpAndKill( float moveUpAmount ) {
+		moveUpAmount -= 40;
 		GameObject objectToRemove = null;
 		foreach( GameObject chatObject in chatObjects ) {
 			chatObject.transform.position = new Vector3( chatObject.transform.position.x, chatObject.transform.position.y + moveUpAmount, chatObject.transform.position.z );
@@ -88,7 +89,11 @@ public class ChatBox : MonoBehaviour
 		Text text = newChat.GetComponentInChildren<Text>();
 		text.text = message.text;
 
-		ChatterData data = chatterData[(int)message.chatter];
+		ChatterData data = chatterData[( int )message.chatter];
+
+		Image image = newChat.transform.Find( "TextPic" ).GetComponent<Image>();
+		image.sprite = data.pic;
+
 		profilePic.sprite = data.pic;
 		chatterTitle.text = data.title;
 		chatterName.text = data.name;
