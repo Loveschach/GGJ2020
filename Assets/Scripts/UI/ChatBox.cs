@@ -66,6 +66,12 @@ public class ChatBox : MonoBehaviour
 		chatQueue.Enqueue( message );
 	}
 
+	public static void QueueTexts( string[] texts, int duration, Chatters chatter ) {
+		foreach ( string text in texts ) {
+			QueueText( Strings.GetString( text ), duration, chatter );
+		}
+	}
+
 	void MoveChatsUpAndKill( float moveUpAmount ) {
 		moveUpAmount -= 40;
 		GameObject objectToRemove = null;
