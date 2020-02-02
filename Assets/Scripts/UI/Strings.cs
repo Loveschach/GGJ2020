@@ -16,6 +16,20 @@ public static class Strings {
 		{ "ENGINEER_TITLE", "Gameplay Engineer" },
 		{ "ARTIST_NAME", "Barely Copic" },
 		{ "ARTIST_TITLE", "Level Artist" },
+		{ "DATE1", "November 5th 2006" },
+		{ "DAYS_REMAINING_1", "-7 days until launch-" },
+		{ "DATE2", "November 6th 2006" },
+		{ "DAYS_REMAINING_2", "-6 days until launch-" },
+		{ "DATE3", "November 7th 2006" },
+		{ "DAYS_REMAINING_3", "-5 days until launch-" },
+		{ "DATE4", "November 8th 2006" },
+		{ "DAYS_REMAINING_4", "-4 days until launch-" },
+		{ "DATE5", "November 9th 2006" },
+		{ "DAYS_REMAINING_5", "-3 days until launch-" },
+		{ "DATE6", "November 10th 2006" },
+		{ "DAYS_REMAINING_6", "-2 days until launch-" },
+		{ "DATE7", "November 11th 2006" },
+		{ "DAYS_REMAINING_7", "-Final day before launch-" },
 	};
 
 	public static string GetString( string key ) {
