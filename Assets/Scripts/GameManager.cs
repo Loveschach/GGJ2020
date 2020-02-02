@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
 	static int MAX_DAYS = 5;
-	static int SPLASH_TIMER = 1;
+	static int SPLASH_TIMER = 3;
 	static int TUTORIAL_MESSAGE_DURATION = 6;
 	static int LEVEL_TIME = 180;
 	static int LEVEL_START_TIME = 8;
@@ -16,8 +17,7 @@ public class GameManager : MonoBehaviour
 		DAY_SPLASH,
 		TUTORIAL,
 		TESTING,
-		EVAL,
-		FINAL,
+		NEXT,
 	};
 	public static GameState CurrentState;
 	static float currentTime;
@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
 		tutorialText.Add( day3TutorialStrings );
 		string[] day4TutorialStrings = { "TUTORIAL_4a", "TUTORIAL_4b", "TUTORIAL_4c" };
 		tutorialText.Add( day4TutorialStrings );
-		string[] day5TutorialStrings = { "TUTORIAL_5a", "TUTORIAL_4b", "TUTORIAL_4c", "TUTORIAL_4d" };
+		string[] day5TutorialStrings = { "TUTORIAL_5a", "TUTORIAL_5b", "TUTORIAL_5c", "TUTORIAL_5d" };
 		tutorialText.Add( day5TutorialStrings );
 	}
 
@@ -69,6 +69,12 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	void UpdateTesting() {
+		if ( currentTime >= LEVEL_END_TIME ) {
+			EnterState( GameState.NEXT );
+		}
+	}
+
 	void EnterSplash() {
 		splashScreen.SetActive( true );
 		GameObject currentDate = GameObject.Find( "Date" );
@@ -86,6 +92,12 @@ public class GameManager : MonoBehaviour
 		}
 	}
 
+	void EnterNext() {
+		CurrentDay += 1;
+		SaveSystem.Save();
+		SceneManager.LoadScene( CurrentDay );
+	}
+
 	void EnterTesting() {
 		currentTime = 0;
 	}
@@ -101,6 +113,9 @@ public class GameManager : MonoBehaviour
 			case ( GameState.TESTING ):
 				EnterTesting();
 				break;
+			case ( GameState.NEXT ):
+				EnterNext();
+				break;
 			default:
 				break;
 		}
@@ -114,6 +129,9 @@ public class GameManager : MonoBehaviour
 				break;
 			case ( GameState.TUTORIAL ):
 				UpdateTutorial();
+				break;
+			case ( GameState.TESTING ):
+				UpdateTesting();
 				break;
 			default:
 				break;

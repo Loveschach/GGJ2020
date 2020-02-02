@@ -9,6 +9,21 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: 57fd6837f4d3bf04d8e508f43edfb5cf
   - enabled: 1
-    path: Assets/Scenes/LevelProto.unity
-    guid: 30aee866e391be547ae1a977d099fbcb
+    path: Assets/Scenes/CodyScene.unity
+    guid: a427adc7a913a29479c1827b2c7928e6
+  - enabled: 1
+    path: Assets/Scenes/CodyScene2.unity
+    guid: 8d7f97ed2f1734d4d87fcc7ea28cb3d2
+  - enabled: 1
+    path: Assets/Scenes/CodyScene3.unity
+    guid: 98a0b5af584dc804f858e0d994e85ecc
+  - enabled: 1
+    path: Assets/Scenes/CodyScene4.unity
+    guid: 9eb2f3f74c47fdb41ad9e6116f94b8b4
+  - enabled: 1
+    path: Assets/Scenes/CodyScene5.unity
+    guid: 1d31b9502f1d76b468644ef522c11fb9
+  - enabled: 1
+    path: Assets/Scenes/FinalEval.unity
+    guid: bc1ca6336baae7b428e25a2b3fef8e07
   m_configObjects: {}
