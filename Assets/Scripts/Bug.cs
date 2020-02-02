@@ -23,13 +23,34 @@ public class Bug : MonoBehaviour {
 	public Color highlightColor = Color.yellow;
 	public Color loggedColor = Color.red;
 
+	//For updating the fix/log state
+	[SerializeField] private GameObject m_broken;
+	[SerializeField] private GameObject m_fixed;
+
 	// Start is called before the first frame update
 	void Start() {
-		logged = SaveSystem.GetLogged( ID );
-
 		Renderer renderer = GetComponent<Renderer>();
 		if (renderer != null) {
 			material = renderer.material;
+		}
+
+		logged = SaveSystem.GetLogged( ID );
+		UpdateFixState();
+	}
+
+	void UpdateFixState() {
+		if (!m_fixed || !m_broken) {
+			Debug.LogWarning("Broken and/or Fixed states are null. Bug cannot be logged.");
+			return;
+		}
+		
+		if (logged) {
+			m_fixed.SetActive(true);
+			m_broken.SetActive(false);
+		}
+		else {
+			m_fixed.SetActive(false);
+			m_broken.SetActive(true);
 		}
 	}
 
@@ -38,14 +59,17 @@ public class Bug : MonoBehaviour {
 		material.SetColor( "_OutlineColor", loggedColor );
 		material.SetFloat( "_OutlineExtrusion", highlightThickness );
 		material.SetFloat("_Alpha", 1);
+
+		//Save logged state for next day
+		SaveSystem.Save();
 	}
 
 	public void SetHighlight() {
 		if ( !logged ) {
 			material.SetColor( "_OutlineColor", highlightColor );
+			material.SetFloat( "_OutlineExtrusion", highlightThickness );
+			material.SetFloat("_Alpha", 1);
 		}
-		material.SetFloat( "_OutlineExtrusion", highlightThickness );
-		material.SetFloat("_Alpha", 1);
 	}
 
 	public void ClearHighlight() {

@@ -23,6 +23,16 @@ public class BugDetector : MonoBehaviour
 		player = GetComponent<FirstPersonController>();
 		originalWalkSpeed = player.m_WalkSpeed;
 		originalRunSpeed = player.m_RunSpeed;
+
+		// Warn if multiple bugs have the same ID
+		Bug[] bugs = FindObjectsOfType<Bug>();
+		foreach (Bug bug1 in bugs) {
+			foreach (Bug bug2 in bugs) {
+				if (bug1 != bug2 && bug1.ID == bug2.ID) {
+					Debug.LogError(string.Format("{0} and {1} share the same ID. Saving/loading bug state will have issues.", bug1, bug2));
+				}
+			}
+		}
 	}
 
 	void ClearLastHighlight()

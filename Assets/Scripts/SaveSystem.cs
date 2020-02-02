@@ -10,7 +10,7 @@ public class SaveSystem : MonoBehaviour
 		foreach( Bug bug in bugs ) {
 			PlayerPrefs.SetInt( BUG_SAVE + bug.ID, bug.logged == true ? 1 : 0 );
 		}
-
+		Debug.Log("Game Saved!");
 		PlayerPrefs.SetInt( DAY_SAVE, GameManager.CurrentDay );
 		PlayerPrefs.Save();
 	}
@@ -19,7 +19,7 @@ public class SaveSystem : MonoBehaviour
 		for( int bugID = 0; bugID < MAX_BUGS; bugID++ ) {
 			PlayerPrefs.SetInt( BUG_SAVE + bugID, 0 );
 		}
-
+		Debug.Log("Save Data Deleted!");
 		PlayerPrefs.SetInt( DAY_SAVE, 1 );
 	}
 
