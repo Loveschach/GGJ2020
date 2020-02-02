@@ -88,8 +88,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				SaveSystem.Save();
 			}
 
-			if ( Input.GetButtonDown( "Fire2" ) ) {
+			//DEBUG DELETE SAVED
+			if (Input.GetKeyDown(KeyCode.M) && Input.GetKey(KeyCode.RightControl)) {
 				SaveSystem.Delete();
+				Debug.Log("Save Data Deleted!");
 			}
 		}
 
