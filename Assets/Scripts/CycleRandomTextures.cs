@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class CycleRandomTextures : MonoBehaviour
 {
-	public float minRandTime = 0.1f;
-	public float maxRandTime = 0.5f;
 	public Texture[] textures;
-	public Renderer[] renderers;
+	Renderer[] renderers;
     void Start()
     {
 		renderers = GetComponentsInChildren<Renderer>();

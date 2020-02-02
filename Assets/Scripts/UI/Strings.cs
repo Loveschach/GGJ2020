@@ -39,7 +39,7 @@ public static class Strings {
 		{ "TUTORIAL_2b", "How was your first day? I think the game is less buggy now, but it's hard to tell with all the churn" },
 		{ "TUTORIAL_2c", ":3 :3 :3 :3 :3" },
 		{ "TUTORIAL_2d", ":3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3 :3" },
-		{ "TUTORIAL_2e", "Uhh, yea. Good luck today. I have a meeting today with the big boss, I hope it goes well oTL" },
+		{ "TUTORIAL_2e", "Uhh, yea. Good luck. I have a meeting today with the big boss, I hope it goes well OTL" },
 		{ "TUTORIAL_3a", "Day 3, nice :->" },
 		{ "TUTORIAL_3b", "Boss man screamed at me for like 2 hours. He says the investors are concerned HH2R is going to underperform." },
 		{ "TUTORIAL_3c", "He says we're not hitting our quotas, but don't worry they don't know any QA's name so I can take the blame." },
