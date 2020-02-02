@@ -66,6 +66,7 @@ public class Enemy : MonoBehaviour
     {
     	moving = true;
 
+		//Spooky ghost shounds
 		Utils.PlayRandomAudio( audioSource, audioClips );
 
 		if ( !moveOnSpawn )
@@ -81,7 +82,10 @@ public class Enemy : MonoBehaviour
 
     	for ( int i = 0; i < 100; i++ )
     	{
-    		transform.position += direction * speed * interval;
+			if (!audioSource.isPlaying) {
+				Utils.PlayRandomAudio(audioSource, audioClips);
+			}
+			transform.position += direction * speed * interval;
     		yield return new WaitForSeconds( interval );
     	}
 

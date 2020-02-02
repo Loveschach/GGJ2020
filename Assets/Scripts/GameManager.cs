@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
 	static int MAX_DAYS = 5;
 	static int SPLASH_TIMER = 1;
-	static int TUTORIAL_MESSAGE_DURATION = 3;
+	static int TUTORIAL_MESSAGE_DURATION = 6;
 	static int LEVEL_TIME = 180;
 	static int LEVEL_START_TIME = 8;
 	static int LEVEL_END_TIME = 20;
@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 	void Start()
     {
 		EnterState( GameState.DAY_SPLASH );
-		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b" };
+		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b", "TUTORIAL_1c", "TUTORIAL_1d", "TUTORIAL_1e", "TUTORIAL_1f", "TUTORIAL_1g", "TUTORIAL_1h", "TUTORIAL_1i" };
 		tutorialText.Add( day1TutorialStrings );
 		string[] day2TutorialStrings = { "TUTORIAL_2a" };
 		tutorialText.Add( day2TutorialStrings );
