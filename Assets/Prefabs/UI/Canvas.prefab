@@ -1638,9 +1638,9 @@ MonoBehaviour:
   chatPanel: {fileID: 562165953512291644}
   ProfilePics:
   - {fileID: 21300000, guid: 6038ac9345accf74bba06de1737de255, type: 3}
-  - {fileID: 21300000, guid: 6038ac9345accf74bba06de1737de255, type: 3}
-  - {fileID: 21300000, guid: 6038ac9345accf74bba06de1737de255, type: 3}
-  - {fileID: 21300000, guid: 6038ac9345accf74bba06de1737de255, type: 3}
+  - {fileID: 21300000, guid: d6fa1144ad652c645aab23d48d2043bc, type: 3}
+  - {fileID: 21300000, guid: c0da3cfc73533fc4ebd389c623bc8d28, type: 3}
+  - {fileID: 21300000, guid: a40822895f5cea849b0967ad8beea2b8, type: 3}
 --- !u!1 &6114338280912221003
 GameObject:
   m_ObjectHideFlags: 0
