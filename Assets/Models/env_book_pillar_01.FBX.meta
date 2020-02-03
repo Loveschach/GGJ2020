@@ -11,7 +11,22 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: env_book_pillar_01
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 03 - Default
+    second: {fileID: 2100000, guid: 810a902d5e35c9f4d9aa2064c7d42fc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall_library_shelf_01
+    second: {fileID: 2100000, guid: 08bb855b9de76d24d82c2b9fb0d3df52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wall_wood_panel_01
+    second: {fileID: 2100000, guid: 2653770d694a81547a2a2b2f435aa47c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
