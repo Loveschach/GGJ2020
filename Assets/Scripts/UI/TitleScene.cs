@@ -24,6 +24,7 @@ public class TitleScene : MonoBehaviour
 		splash1.SetActive( true );
 		splash2.SetActive( false );
 		title.SetActive( false );
+		SaveSystem.Delete();
     }
 
 	public void StartButton() {
