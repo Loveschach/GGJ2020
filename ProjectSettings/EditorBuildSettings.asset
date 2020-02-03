@@ -12,8 +12,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Day1.unity
     guid: 03cc008acb33a734682c069f4634c7c5
   - enabled: 1
-    path: Assets/Scenes/CodyScene2.unity
-    guid: 8d7f97ed2f1734d4d87fcc7ea28cb3d2
+    path: Assets/Scenes/Day2.unity
+    guid: 4877dd62c78d55b408ea5d0d1b48fd54
   - enabled: 1
     path: Assets/Scenes/CodyScene3.unity
     guid: 98a0b5af584dc804f858e0d994e85ecc
