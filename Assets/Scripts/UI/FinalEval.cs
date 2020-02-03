@@ -44,10 +44,10 @@ public class FinalEval : MonoBehaviour
 		Evaluate();
 
 		Text metaText = final.transform.Find( "Rating" ).GetComponent<Text>();
-		if ( totalResolvedBugs >= 20 ) {
+		if ( totalResolvedBugs >= 11 ) {
 			metaText.text = META_GOOD;
 		}
-		else if ( totalResolvedBugs >= 10 ) {
+		else if ( totalResolvedBugs >= 5 ) {
 			metaText.text = META_OK;
 		}
 		else {
@@ -55,10 +55,10 @@ public class FinalEval : MonoBehaviour
 		}
 
 		Text splash2Text = splash2.transform.Find( "Epilogue" ).GetComponent<Text>();
-		if ( totalResolvedBugs >= 20 ) {
+		if ( totalResolvedBugs >= 11 ) {
 			splash2Text.text = EPILOGUE_GOOD;
 		}
-		else if ( totalResolvedBugs >= 10 ) {
+		else if ( totalResolvedBugs >= 5 ) {
 			splash2Text.text = EPILOGUE_OK;
 		} 
 		else {
