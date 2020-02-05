@@ -48,4 +48,4 @@ MonoBehaviour:
   active: 0
   spawnRate: 4
   spawnOffset: 0
-  count: -1
+  count: 1

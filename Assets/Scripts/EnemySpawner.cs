@@ -29,13 +29,27 @@ public class EnemySpawner : MonoBehaviour
 
         wasActive = active;
 
-        if ( active && Time.time >= nextSpawnTime && ( count < 0 || spawned < count ) )
+        if ( ShouldSpawn() )
         {
             Enemy enemy = Instantiate( enemyPrefab, transform.position, transform.rotation ).GetComponent<Enemy>();
             enemy.spawned = true;
             spawned++;
             nextSpawnTime = Time.time + spawnRate;
         }
+    }
+
+    bool ShouldSpawn()
+    {
+        if ( !active )
+            return false;
+
+        if ( Time.time < nextSpawnTime )
+            return false;
+
+        if ( count > 0 && spawned >= count )
+            return false;
+
+        return true;
     }
 
     public void Reset()
