@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.UI;
 
 public class BugDetector : MonoBehaviour
 {
@@ -17,12 +18,17 @@ public class BugDetector : MonoBehaviour
 	float originalWalkSpeed = 0;
 	float originalRunSpeed = 0;
 
+	[SerializeField]
+	Text cursor;
+
 	void Start()
 	{
 		camTrans = Camera.main.transform;
 		player = GetComponent<FirstPersonController>();
 		originalWalkSpeed = player.m_WalkSpeed;
 		originalRunSpeed = player.m_RunSpeed;
+
+		cursor.color = new Color( 1, 0, 0, 0 );
 
 		// Warn if multiple bugs have the same ID
 		Bug[] bugs = FindObjectsOfType<Bug>();
@@ -47,7 +53,7 @@ public class BugDetector : MonoBehaviour
 	void DetectiveModeUpdate() {
 		RaycastHit hit;
 		// Does the ray intersect any buggable objects?
-		if (Physics.Raycast(camTrans.position, camTrans.TransformDirection(Vector3.forward), out hit, Mathf.Infinity)) {
+		if (Physics.Raycast(camTrans.position, camTrans.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide)) {
 			Bug bug = hit.collider.GetComponentInParent<Bug>();
 			if (bug != null && !bug.logged) {
 				// If it's different, unhighlight the last thing, and highlight this thing
@@ -77,12 +83,14 @@ public class BugDetector : MonoBehaviour
 		if (Input.GetMouseButtonUp(1)) {
 			player.m_WalkSpeed = originalWalkSpeed;
 			player.m_RunSpeed = originalRunSpeed;
+			cursor.color = new Color( 1, 0, 0, 0 );
 			ClearLastHighlight();
 		}
 		//Enter Detective mode
 		else if (Input.GetMouseButtonDown(1)) {
 			player.m_WalkSpeed = slowedSpeed;
 			player.m_RunSpeed = slowedSpeed;
+			cursor.color = new Color( 1, 0, 0, 1 );
 		}
 		//Update Detective mode
 		if (Input.GetMouseButton(1)) {

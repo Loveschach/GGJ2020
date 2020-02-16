@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 	public static GameState CurrentState;
 	static float currentTime;
 	public GameObject splashScreen;
+	public bool playSplash = true;
+	public bool playTutorial = true;
 	List<string[]> tutorialText = new List<string[]>();
 	float tutorialTimer = 0;
 
@@ -57,7 +59,10 @@ public class GameManager : MonoBehaviour
 	}
 
 	void UpdateSplashState() {
-		if( currentTime >= SPLASH_TIMER ) {
+		if ( !playSplash ) {
+			EnterState( GameState.TUTORIAL );
+		}
+		else if( currentTime >= SPLASH_TIMER ) {
 			EnterState( GameState.TUTORIAL );
 			Animator splashAnimator = splashScreen.GetComponent<Animator>();
 			splashAnimator.SetTrigger( "Fade" );
@@ -65,7 +70,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	void UpdateTutorial() {
-		if( currentTime >= tutorialTimer ) {
+		if( !playTutorial || currentTime >= tutorialTimer ) {
 			EnterState( GameState.TESTING );
 		}
 	}
@@ -80,22 +85,30 @@ public class GameManager : MonoBehaviour
 	}
 
 	void EnterSplash() {
-		currentTime = 0;
-		tutorialTimer = 0;
-		splashScreen.SetActive( true );
-		GameObject currentDate = GameObject.Find( "Date" );
-		GameObject daysRemaining = GameObject.Find( "DaysRemaining" );
-		currentDate.GetComponentInChildren<Text>().text = Strings.GetString( "DATE" + CurrentDay );
-		daysRemaining.GetComponentInChildren<Text>().text = Strings.GetString( "DAYS_REMAINING_" + CurrentDay );
+		if ( playSplash )
+		{
+			currentTime = 0;
+			tutorialTimer = 0;
+			splashScreen.SetActive( true );
+			GameObject currentDate = GameObject.Find( "Date" );
+			GameObject daysRemaining = GameObject.Find( "DaysRemaining" );
+			currentDate.GetComponentInChildren<Text>().text = Strings.GetString( "DATE" + CurrentDay );
+			daysRemaining.GetComponentInChildren<Text>().text = Strings.GetString( "DAYS_REMAINING_" + CurrentDay );
+		}
+		
 	}
 
 	void EnterTutorial() {
-		string[] tutorialStrings = tutorialText[CurrentDay - 1];
-		tutorialTimer = 0;
-		foreach( string tutorial in tutorialStrings ) {
-			ChatBox.QueueText( Strings.GetString( tutorial ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
-			tutorialTimer += TUTORIAL_MESSAGE_DURATION;
+		if ( playTutorial )
+		{
+			string[] tutorialStrings = tutorialText[CurrentDay - 1];
+			tutorialTimer = 0;
+			foreach( string tutorial in tutorialStrings ) {
+				ChatBox.QueueText( Strings.GetString( tutorial ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+				tutorialTimer += TUTORIAL_MESSAGE_DURATION;
+			}
 		}
+		
 	}
 
 	static void EnterNext() {

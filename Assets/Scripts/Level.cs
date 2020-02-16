@@ -10,13 +10,11 @@ public class Level : MonoBehaviour
 	public bool complete = false;
 
 	List<Enemy> enemies;
-	List<Enemy> checkpointEnemies;
 
 	void Awake()
 	{
-		playerController = GameObject.Find( "Player" ).GetComponent<FirstPersonController>();
+		playerController = FindObjectOfType<FirstPersonController>();
 		enemies = new List<Enemy>();
-		checkpointEnemies = new List<Enemy>();
 	}
 
     // Start is called before the first frame update
@@ -57,10 +55,6 @@ public class Level : MonoBehaviour
     	{
     		StartCoroutine( "SendPlayerToStart" );
     	}
-
-    	//List<Enemy> enemiesToReset = enemies;
-    	//if ( playerDied )
-    	//	enemiesToReset = checkpointEnemies;
     }
 
     IEnumerator SendPlayerToStart()
@@ -91,18 +85,14 @@ public class Level : MonoBehaviour
     public void AddEnemy( Enemy enemy )
     {
     	enemies.Add( enemy );
-    	//checkpointEnemies.Add( enemy );
     }
 
     public void RemoveEnemy( Enemy enemy )
     {
     	enemies.Remove( enemy );
-    	//if ( checkpointEnemies.Contains( enemy ) )
-    	//	checkpointEnemies.Remove( enemy );
     }
 
     public void Checkpoint()
     {
-    	//checkpointEnemies = new List<Enemy>();
     }
 }
