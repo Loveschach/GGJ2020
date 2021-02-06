@@ -29,9 +29,7 @@ public class Bug : MonoBehaviour {
 		Renderer[] renderers = GetComponentsInChildren<Renderer>();
 		foreach (Renderer renderer in renderers) {
 			foreach (Material material in renderer.materials) {
-				Debug.Log(material.shader);
 				foreach (Shader shader in supportedOutlineShaders) {
-					Debug.Log(shader);
 					if (material.shader == shader) {
 						materials.Add(material);
 					}
