@@ -48,6 +48,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 63795a9d2a7d0034e9be7b02398ae207,
+        type: 3}
+      propertyPath: m_Name
+      value: BadGeo_Glitch2 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 63795a9d2a7d0034e9be7b02398ae207,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -103,11 +108,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 63795a9d2a7d0034e9be7b02398ae207,
-        type: 3}
-      propertyPath: m_Name
-      value: BadGeo_Glitch2 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 63795a9d2a7d0034e9be7b02398ae207,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -143,6 +143,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: ecca1d6080f700e42a577296443ac8e7,
+        type: 3}
+      propertyPath: m_Name
+      value: InvisibleCollision
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: ecca1d6080f700e42a577296443ac8e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -198,11 +203,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: ecca1d6080f700e42a577296443ac8e7,
-        type: 3}
-      propertyPath: m_Name
-      value: InvisibleCollision
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: ecca1d6080f700e42a577296443ac8e7,
         type: 3}
       propertyPath: ID
@@ -236,6 +236,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
+      propertyPath: m_Name
+      value: BadCollision 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -291,11 +296,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
-        type: 3}
-      propertyPath: m_Name
-      value: BadCollision 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -326,6 +326,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 6add4c7764fbfeb4c909f271d49717c0,
+        type: 3}
+      propertyPath: m_Name
+      value: BadGeo_Glitch1 (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -381,11 +386,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 6add4c7764fbfeb4c909f271d49717c0,
-        type: 3}
-      propertyPath: m_Name
-      value: BadGeo_Glitch1 (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -421,10 +421,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 6add4c7764fbfeb4c909f271d49717c0,
+        type: 3}
+      propertyPath: m_Name
+      value: BadGeo_Glitch1 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
@@ -434,7 +439,7 @@ PrefabInstance:
     - target: {fileID: 2903858360551626946, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 5.02
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
@@ -476,11 +481,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 6add4c7764fbfeb4c909f271d49717c0,
-        type: 3}
-      propertyPath: m_Name
-      value: BadGeo_Glitch1 (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -516,6 +516,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 956ececcfa8e16c4995d040d1cf8e036,
+        type: 3}
+      propertyPath: m_Name
+      value: BadTexture_FloorSection1
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 956ececcfa8e16c4995d040d1cf8e036,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -571,11 +576,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 956ececcfa8e16c4995d040d1cf8e036,
-        type: 3}
-      propertyPath: m_Name
-      value: BadTexture_FloorSection1
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 956ececcfa8e16c4995d040d1cf8e036,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -626,6 +626,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 63795a9d2a7d0034e9be7b02398ae207,
+        type: 3}
+      propertyPath: m_Name
+      value: BadGeo_Glitch2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 63795a9d2a7d0034e9be7b02398ae207,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -681,11 +686,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 63795a9d2a7d0034e9be7b02398ae207,
-        type: 3}
-      propertyPath: m_Name
-      value: BadGeo_Glitch2 (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 63795a9d2a7d0034e9be7b02398ae207,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -721,6 +721,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 137bc45fcc590c54386482cd3a736185,
+        type: 3}
+      propertyPath: m_Name
+      value: BadCollision 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 137bc45fcc590c54386482cd3a736185,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -776,11 +781,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 137bc45fcc590c54386482cd3a736185,
-        type: 3}
-      propertyPath: m_Name
-      value: BadCollision 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 137bc45fcc590c54386482cd3a736185,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -811,6 +811,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 6add4c7764fbfeb4c909f271d49717c0,
+        type: 3}
+      propertyPath: m_Name
+      value: BadGeo_Glitch1 (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -866,11 +871,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 6add4c7764fbfeb4c909f271d49717c0,
-        type: 3}
-      propertyPath: m_Name
-      value: BadGeo_Glitch1 (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 6add4c7764fbfeb4c909f271d49717c0,
         type: 3}
       propertyPath: CompletionStrings.Array.size
@@ -906,6 +906,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: ecca1d6080f700e42a577296443ac8e7,
+        type: 3}
+      propertyPath: m_Name
+      value: InvisibleCollision
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: ecca1d6080f700e42a577296443ac8e7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -961,11 +966,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: ecca1d6080f700e42a577296443ac8e7,
-        type: 3}
-      propertyPath: m_Name
-      value: InvisibleCollision
-      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: ecca1d6080f700e42a577296443ac8e7,
         type: 3}
       propertyPath: ID
@@ -1002,6 +1002,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2488154221487550783}
     m_Modifications:
+    - target: {fileID: 2903858360551626950, guid: 63795a9d2a7d0034e9be7b02398ae207,
+        type: 3}
+      propertyPath: m_Name
+      value: BadGeo_Glitch2 (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 63795a9d2a7d0034e9be7b02398ae207,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1056,11 +1061,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626950, guid: 63795a9d2a7d0034e9be7b02398ae207,
-        type: 3}
-      propertyPath: m_Name
-      value: BadGeo_Glitch2 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 63795a9d2a7d0034e9be7b02398ae207,
         type: 3}
