@@ -9,9 +9,9 @@ public class GameManager : MonoBehaviour
 	static int MAX_DAYS = 5;
 	static int SPLASH_TIMER = 3;
 	static int TUTORIAL_MESSAGE_DURATION = 4;
-	static int LEVEL_TIME = 180;
+	static int LEVEL_TIME = 140;
 	static int LEVEL_START_TIME = 8;
-	static int LEVEL_END_TIME = 20;
+	static int LEVEL_END_TIME = 18;
 	public static int CurrentDay = 1;
 	public enum GameState {
 		DAY_SPLASH,

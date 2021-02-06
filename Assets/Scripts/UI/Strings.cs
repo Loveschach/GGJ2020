@@ -34,7 +34,7 @@ public static class Strings {
 		{ "TUTORIAL_1f", "Don't log anything that isn't a bug though, the devs will freak out and report you to the Studio head >:[" },
 		{ "TUTORIAL_1g", "Our JudgeyGame scores is totally dependent on how bug free the game is. Management says if we get less than 80% they'll shut down the studio :E" },
 		{ "TUTORIAL_1h", "Anyways, sorry to talk your ear off. Don't worry too much about it, just do your job well and you won't get fired." },
-		{ "TUTORIAL_1i", "Everyone leaves at 20:00, so you have til then each day to fix bugs. Talk to you later!" },
+		{ "TUTORIAL_1i", "Everyone leaves at 18:00, so you have til then each day to fix bugs. Talk to you later!" },
 		{ "TUTORIAL_2a", "Day #2 time to get started!" },
 		{ "TUTORIAL_2b", "How was your first day? I think the game is less buggy now, but it's hard to tell with all the churn" },
 		{ "TUTORIAL_2c", ":3 :3 :3 :3 :3" },
