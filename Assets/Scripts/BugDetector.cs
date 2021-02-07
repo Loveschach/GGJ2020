@@ -53,7 +53,7 @@ public class BugDetector : MonoBehaviour
 	void DetectiveModeUpdate() {
 		RaycastHit hit;
 		// Does the ray intersect any buggable objects?
-		if (Physics.Raycast(camTrans.position, camTrans.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, Physics.DefaultRaycastLayers, QueryTriggerInteraction.Collide)) {
+		if (Physics.Raycast(camTrans.position, camTrans.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, LayerMask.GetMask( "Bug" ) | LayerMask.GetMask( "NoPlayer" ), QueryTriggerInteraction.Collide)) {
 			Bug bug = hit.collider.GetComponentInParent<Bug>();
 			if (bug != null && !bug.logged) {
 				// If it's different, unhighlight the last thing, and highlight this thing

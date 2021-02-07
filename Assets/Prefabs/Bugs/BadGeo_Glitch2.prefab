@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7055359939160209398}
   - component: {fileID: 2734693443178039960}
   - component: {fileID: 4472468955827483426}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BrokenArt (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_LocalScale: {x: 0.6147238, y: 0.6147238, z: 0.6147238}
   m_Children: []
   m_Father: {fileID: 6392690951701700775}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7055359939160209398
 MeshFilter:
@@ -103,25 +103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10ee734c93a22c45a8084119cba7527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minRandTime: 0.1
-  maxRandTime: 0.5
   textures:
   - {fileID: 2800000, guid: a50ed1edd99cae646a978b9cb5220878, type: 3}
   - {fileID: 2800000, guid: 3237bf989e46fb24cb80d912b42c246b, type: 3}
   - {fileID: 2800000, guid: 95bc7c4ae58e7774cba8b735d0ed8d2a, type: 3}
---- !u!65 &2153066851170246536
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6739764863512776811}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6786063777120758986
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +119,7 @@ GameObject:
   - component: {fileID: 8385520296523965429}
   - component: {fileID: 6439784757272363679}
   - component: {fileID: 662685740883276787}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BrokenArt (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +138,7 @@ Transform:
   m_LocalScale: {x: 0.98028004, y: 0.98028004, z: 0.98028004}
   m_Children: []
   m_Father: {fileID: 6392690951701700775}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8385520296523965429
 MeshFilter:
@@ -225,7 +210,7 @@ GameObject:
   - component: {fileID: 2669518200332524657}
   - component: {fileID: 194146277744870611}
   - component: {fileID: 756214261690087671}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BrokenArt (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -244,7 +229,7 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 6392690951701700775}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2669518200332524657
 MeshFilter:
@@ -371,6 +356,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2702627824670950397, guid: 1d2009d19fd217543bae1b29db9e9519,
+        type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 1434146068, guid: 1d2009d19fd217543bae1b29db9e9519, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.6
@@ -399,12 +389,6 @@ GameObject:
 --- !u!4 &6392690951701700775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 378041662525760991, guid: 1d2009d19fd217543bae1b29db9e9519,
-    type: 3}
-  m_PrefabInstance: {fileID: 6739764864231523704}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6739764863512776811 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1434146067, guid: 1d2009d19fd217543bae1b29db9e9519,
     type: 3}
   m_PrefabInstance: {fileID: 6739764864231523704}
   m_PrefabAsset: {fileID: 0}
