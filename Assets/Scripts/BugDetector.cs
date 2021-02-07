@@ -66,6 +66,7 @@ public class BugDetector : MonoBehaviour
 				//Left mouse or Q... my laptop wouldn't let me click both left and right mouse buttons at once.
 				if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Q)) {
 					bug.SetLogged(true);
+					GameManager.BugLogged.Invoke();
 				}
 			}
 			else {

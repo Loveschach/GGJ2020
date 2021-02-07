@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -26,6 +27,8 @@ public class GameManager : MonoBehaviour
 	public bool playTutorial = true;
 	List<string[]> tutorialText = new List<string[]>();
 	float tutorialTimer = 0;
+	public GameObject[] BugContainers;
+	public static UnityEvent BugLogged = new UnityEvent();
 
 
 	// Start is called before the first frame update
@@ -43,6 +46,7 @@ public class GameManager : MonoBehaviour
 		tutorialText.Add( day4TutorialStrings );
 		string[] day5TutorialStrings = { "TUTORIAL_5a", "TUTORIAL_5b", "TUTORIAL_5c", "TUTORIAL_5d" };
 		tutorialText.Add( day5TutorialStrings );
+		BugLogged.AddListener( EvaluateBugs );
 	}
 
 	public static string GetTime() {
@@ -109,6 +113,33 @@ public class GameManager : MonoBehaviour
 			}
 		}
 		
+	}
+
+	bool AllBugsLogged() {
+		if( BugContainers.Length == 0 ) {
+			return false;
+		}
+
+		foreach ( GameObject bugContainer in BugContainers ) {
+			Bug[] bugs = bugContainer.GetComponentsInChildren<Bug>();
+
+			foreach ( Bug bug in bugs ) {
+				if ( !bug.logged ) {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+	void EvaluateBugs() {
+		if( AllBugsLogged() ) {
+			string text = "MANAGER_foundAllBugs";
+			if ( CurrentDay == MAX_DAYS ) {
+				text = "MANAGER_foundAllBugsFinal";
+			} 
+			ChatBox.QueueText( Strings.GetString( text ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+		}
 	}
 
 	static void EnterNext() {
