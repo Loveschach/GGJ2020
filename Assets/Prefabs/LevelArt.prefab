@@ -2162,6 +2162,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5133797385017485147}
     m_Modifications:
+    - target: {fileID: 100000, guid: 2438f31f3c0b25142abd2b523b95d146, type: 3}
+      propertyPath: m_Name
+      value: env_staircase_broken
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2438f31f3c0b25142abd2b523b95d146, type: 3}
       propertyPath: m_LocalPosition.x
       value: -14
@@ -2205,10 +2209,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 2438f31f3c0b25142abd2b523b95d146, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 2438f31f3c0b25142abd2b523b95d146, type: 3}
-      propertyPath: m_Name
-      value: env_staircase_broken
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2438f31f3c0b25142abd2b523b95d146, type: 3}
