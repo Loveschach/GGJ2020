@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
 	void Start()
     {
 		currentTime = 0;
+		player = GameObject.FindGameObjectWithTag( "Player" );
 		EnterState( GameState.DAY_SPLASH );
 		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b", "TUTORIAL_1c", "TUTORIAL_1d", "TUTORIAL_1e", "TUTORIAL_1g", "TUTORIAL_1h", "TUTORIAL_1i" };
 		tutorialText.Add( day1TutorialStrings );
@@ -49,7 +50,6 @@ public class GameManager : MonoBehaviour
 		string[] day5TutorialStrings = { "TUTORIAL_5a", "TUTORIAL_5b", "TUTORIAL_5c", "TUTORIAL_5d" };
 		tutorialText.Add( day5TutorialStrings );
 		BugLogged.AddListener( EvaluateBugs );
-		player = GameObject.FindGameObjectWithTag( "Player" );
 	}
 
 	public static string GetTime() {
@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour
 			GameObject daysRemaining = GameObject.Find( "DaysRemaining" );
 			currentDate.GetComponentInChildren<Text>().text = Strings.GetString( "DATE" + CurrentDay );
 			daysRemaining.GetComponentInChildren<Text>().text = Strings.GetString( "DAYS_REMAINING_" + CurrentDay );
+			player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
 		}
 		
 	}
@@ -108,6 +109,7 @@ public class GameManager : MonoBehaviour
 	void EnterTutorial() {
 		if ( playTutorial )
 		{
+			player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
 			string[] tutorialStrings = tutorialText[CurrentDay - 1];
 			tutorialTimer = 0;
 			foreach( string tutorial in tutorialStrings ) {
