@@ -1975,6 +1975,21 @@ PrefabInstance:
       propertyPath: m_Text
       value: Exit Game
       objectReference: {fileID: 0}
+    - target: {fileID: 6914333887193173583, guid: 2c261b8adbda38648a8906b341d46942,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.40784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914333887193173583, guid: 2c261b8adbda38648a8906b341d46942,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.40784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 6914333887193173583, guid: 2c261b8adbda38648a8906b341d46942,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.40784314
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c261b8adbda38648a8906b341d46942, type: 3}
 --- !u!224 &5450966178296375109 stripped
