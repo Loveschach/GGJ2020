@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
 	float tutorialTimer = 0;
 	public GameObject[] BugContainers;
 	public static UnityEvent BugLogged = new UnityEvent();
+	GameObject player;
+	bool outOfBoundsPrompted = false;
 
 
 	// Start is called before the first frame update
@@ -47,6 +49,7 @@ public class GameManager : MonoBehaviour
 		string[] day5TutorialStrings = { "TUTORIAL_5a", "TUTORIAL_5b", "TUTORIAL_5c", "TUTORIAL_5d" };
 		tutorialText.Add( day5TutorialStrings );
 		BugLogged.AddListener( EvaluateBugs );
+		player = GameObject.FindGameObjectWithTag( "Player" );
 	}
 
 	public static string GetTime() {
@@ -198,6 +201,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 		UpdateState();
+		if( player.transform.position.y <= -8 && !outOfBoundsPrompted ) {
+			ChatBox.QueueText( Strings.GetString( "MANAGER_outOfBounds" ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+			outOfBoundsPrompted = true;
+		}
     }
 
 	public static void IncrementDay() {

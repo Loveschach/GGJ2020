@@ -51,6 +51,7 @@ public static class Strings {
 		{ "TUTORIAL_5b", "Sorry about the doom and gloom yesterday, I thought they were going to fire me, but they gave me a raise :OOOOOOOO" },
 		{ "TUTORIAL_5c", "Although, yesterday got me thinking about what would happen if I did leave, and it sounds kind of nice..." },
 		{ "TUTORIAL_5d", "Nevermind that, we have a game to ship! Good luck today it's the final push, GIVE IT YOUR ALL o7" },
+		{ "MANAGER_outOfBounds", "Oh uh, somehow you managed to get out of bounds... This doesn't count as a logged bug!! Press (R) to restart the level." },
 		{ "MANAGER_foundAllBugs", "Wow! I think you found all the bugs in the current build. Feel free to clock out for today (ESC). See you tomorrow!" },
 		{ "MANAGER_foundAllBugsFinal", "Can it be? I think that's every bug! Somehow we made it, and it's thanks to you. Clock out (ESC) and I'll see you at launch!" },
 		{ "MANAGER_fixBug_Blocked", "Oh no! We're totally blocked from testing today :[. You might as well clock out, hopefully it'll be fixed tomorrow." },
