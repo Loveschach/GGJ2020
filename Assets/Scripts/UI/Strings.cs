@@ -52,6 +52,7 @@ public static class Strings {
 		{ "TUTORIAL_5c", "Although, yesterday got me thinking about what would happen if I did leave, and it sounds kind of nice..." },
 		{ "TUTORIAL_5d", "Nevermind that, we have a game to ship! Good luck today it's the final push, GIVE IT YOUR ALL o7" },
 		{ "MANAGER_fixBug_Blocked", "Oh no! We're totally blocked from testing today :[. You might as well clock out, hopefully it'll be fixed tomorrow." },
+		{ "MANAGER_fixBug_Blocked2", "Press (ESC) to get to the Pause Menu and clock out." },
 		{ "MANAGER_fixBug_Start", "Heh heh, I put that bug there! You always have to force the player to turn around at the beginning of a level :p." },
 		{ "ART_fixBug_generic", "oh daaaang dude! i didnt even notice that bug earlier. i gotchu tho, fix comin' in hot!" },
 		{ "ART_fixBug_generic2", "LOL omg that thing looks SO DUMB hahahahahaha. i'll change it (after i take a screenshot) xD" },
