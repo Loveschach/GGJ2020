@@ -204,12 +204,12 @@ PrefabInstance:
     - target: {fileID: 2903858360551626957, guid: fb19f879e7dffed408e864d486f6b8fc,
         type: 3}
       propertyPath: CompletionStrings.Array.data[0]
-      value: DESIGN_fixBug_clipLevel
+      value: CODE_badCollision1
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: fb19f879e7dffed408e864d486f6b8fc,
         type: 3}
       propertyPath: chatter
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8649688378523289221, guid: fb19f879e7dffed408e864d486f6b8fc,
         type: 3}
@@ -238,21 +238,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
-        type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.9899988
       objectReference: {fileID: 0}
@@ -268,8 +253,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2903858360551626946, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
@@ -279,12 +299,12 @@ PrefabInstance:
     - target: {fileID: 2903858360551626957, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
       propertyPath: CompletionStrings.Array.data[0]
-      value: CODE_badCollision1
+      value: DESIGN_fixBug_clipLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2903858360551626957, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
       propertyPath: chatter
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8649688378523289221, guid: 2d49cad3a0beaf5488a9ba5f86643f41,
         type: 3}
