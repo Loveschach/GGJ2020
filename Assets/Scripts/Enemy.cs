@@ -86,12 +86,12 @@ public class Enemy : MonoBehaviour
     	direction = Vector3.Normalize( direction );
 
     	var interval = 0.05f;
+        if ( !audioSource.isPlaying ) {
+            Utils.PlayRandomAudio( audioSource, audioClips );
+        }
 
-    	for ( int i = 0; i < 100; i++ )
+        for ( int i = 0; i < 100; i++ )
     	{
-			if (!audioSource.isPlaying) {
-				Utils.PlayRandomAudio(audioSource, audioClips);
-			}
 			transform.position += direction * speed * interval;
     		yield return new WaitForSeconds( interval );
     	}
