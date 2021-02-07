@@ -1152,6 +1152,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
+        type: 3}
+      propertyPath: spawnRate
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a201737994cbe2f44b6c64b57abab8b7, type: 3}
 --- !u!4 &7941957228561316049 stripped
@@ -1242,7 +1247,7 @@ PrefabInstance:
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnRate
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
@@ -1339,6 +1344,11 @@ PrefabInstance:
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnOffset
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
+        type: 3}
+      propertyPath: spawnRate
       value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1523,12 +1533,12 @@ PrefabInstance:
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnRate
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnOffset
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a201737994cbe2f44b6c64b57abab8b7, type: 3}
@@ -1991,12 +2001,12 @@ PrefabInstance:
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnRate
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnOffset
-      value: 5
+      value: 3.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a201737994cbe2f44b6c64b57abab8b7, type: 3}
@@ -2088,12 +2098,12 @@ PrefabInstance:
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnRate
-      value: 8
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
       propertyPath: spawnOffset
-      value: 9
+      value: 5.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a201737994cbe2f44b6c64b57abab8b7, type: 3}
@@ -2186,6 +2196,11 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnOffset
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933503160286733159, guid: a201737994cbe2f44b6c64b57abab8b7,
+        type: 3}
+      propertyPath: spawnRate
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 3846218091110919544, guid: a201737994cbe2f44b6c64b57abab8b7,
         type: 3}
