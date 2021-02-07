@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
 			currentTime = 0;
 			tutorialTimer = 0;
 			splashScreen.SetActive( true );
+			splashScreen.GetComponent<AudioSource>().Play();
 			GameObject currentDate = GameObject.Find( "Date" );
 			GameObject daysRemaining = GameObject.Find( "DaysRemaining" );
 			currentDate.GetComponentInChildren<Text>().text = Strings.GetString( "DATE" + CurrentDay );
