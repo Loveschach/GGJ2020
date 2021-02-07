@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour
 	public static UnityEvent BugLogged = new UnityEvent();
 	GameObject player;
 	bool outOfBoundsPrompted = false;
+	public AudioSource MusicAudio;
 
 
 	// Start is called before the first frame update
@@ -110,6 +111,10 @@ public class GameManager : MonoBehaviour
 	void EnterTutorial() {
 		if ( playTutorial )
 		{
+			if( CurrentDay > 3 ) {
+				MusicAudio.Play();
+			}
+
 			player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
 			string[] tutorialStrings = tutorialText[CurrentDay - 1];
 			tutorialTimer = 0;
