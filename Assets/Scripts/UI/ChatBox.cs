@@ -25,6 +25,9 @@ public class ChatBox : MonoBehaviour
 	public Text chatterTitle;
 	public Text time;
 	public GameObject chatPanel;
+	public AudioClip[] typingSounds;
+	public AudioSource audioSource;
+	int currentAudioIndex = 0;
 
 	public Sprite[] ProfilePics;
 
@@ -56,6 +59,7 @@ public class ChatBox : MonoBehaviour
 		chatterData[( int )Chatters.ARTIST].name = Strings.GetString( "ARTIST_NAME" );
 		chatterData[( int )Chatters.ARTIST].title = Strings.GetString( "ARTIST_TITLE" );
 		chatterData[( int )Chatters.ARTIST].pic = ProfilePics[( int )Chatters.ARTIST];
+		currentAudioIndex = 0;
 	}
 
 	public static void QueueText( string text, int duration, Chatters chatter ) {
@@ -106,6 +110,15 @@ public class ChatBox : MonoBehaviour
 		RectTransform rect = newChat.GetComponent<RectTransform>();
 		MoveChatsUpAndKill( rect.rect.height );
 		chatObjects.Add( newChat );
+		PlayNextTypingSound();
+	}
+
+	void PlayNextTypingSound() {
+		Utils.PlayRandomAudio( audioSource, typingSounds );
+		currentAudioIndex++;
+		if ( currentAudioIndex >= typingSounds.Length ) {
+			currentAudioIndex = 0;
+		}
 	}
 
 	public static void ClearQueue() {
