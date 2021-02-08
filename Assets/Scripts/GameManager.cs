@@ -145,11 +145,14 @@ public class GameManager : MonoBehaviour
 
 	void EvaluateBugs() {
 		if( AllBugsLogged() ) {
-			string text = "MANAGER_foundAllBugs";
 			if ( CurrentDay == MAX_DAYS ) {
-				text = "MANAGER_foundAllBugsFinal";
-			} 
-			ChatBox.QueueText( Strings.GetString( text ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+				ChatBox.QueueText( Strings.GetString( "MANAGER_foundAllBugsFinal" ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+				ChatBox.QueueText( Strings.GetString( "MANAGER_foundAllBugsFinal2" ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+				ChatBox.QueueText( Strings.GetString( "MANAGER_foundAllBugsFinal3" ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+			} else {
+				ChatBox.QueueText( Strings.GetString( "MANAGER_foundAllBugs" ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+			}
+			
 		}
 	}
 

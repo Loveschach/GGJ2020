@@ -49,7 +49,9 @@ public static class Strings {
 		{ "TUTORIAL_5d", "Nevermind that, we have a game to ship! We're all working until 24:00 today because launch day is tomorrow. Good luck! o7" },
 		{ "MANAGER_outOfBounds", "Oh uh, somehow you managed to get out of bounds... This doesn't count as a logged bug!! Press (R) to restart the level." },
 		{ "MANAGER_foundAllBugs", "Wow! I think you found all the bugs in the current build. Feel free to clock out for today (ESC). See you tomorrow!" },
-		{ "MANAGER_foundAllBugsFinal", "Can it be? I think that's every bug! Somehow we made it, and it's thanks to you. Clock out (ESC) and I'll see you at launch!" },
+		{ "MANAGER_foundAllBugsFinal", "Can it be? I think that's every bug! Somehow we made it, and it's thanks to you." },
+		{ "MANAGER_foundAllBugsFinal2", "It seems like John went a little berserk there. I spoke to the higher ups and they're impressed!" },
+		{ "MANAGER_foundAllBugsFinal3", "They said they're offering me a raise, and you a promotion. Thank you for your hard work! Clock out (ESC) and I'll see you at launch!" },
 		{ "MANAGER_fixBug_Blocked", "Oh no! We're totally blocked from testing :[. You might as well clock out, hopefully it'll be fixed tomorrow." },
 		{ "MANAGER_fixBug_Blocked2", "So much for finding a lot of bugs today :X. We might be in trouble. Press (ESC) to get to the Pause Menu and clock out." },
 		{ "MANAGER_fixBug_Start", "Heh heh, I put that bug there! You always have to force the player to turn around at the beginning of a level :p." },
@@ -88,6 +90,19 @@ public static class Strings {
 		{ "CODE_invisWall1", "This really looks like an issue for a designer or scripter. Whatever, I'll look at it QA slime." },
 		{ "CODE_invisWall2", "Why would you even want to finish this garbage game? Fine, I'll fix it." },
 		{ "QA_wrongBug_generic", "Uhhhh hey, just letting you know that we've gotten a complaint. Try to be a bit more observant for this build, and be careful about what you bug up! :E" },
+		{ "CODE_daylast1", "Why do you want to ship this game so badly?" },
+		{ "CODE_daylast2", "I checked in new blockers every day, the game should have been unplayable!" },
+		{ "CODE_daylast3", "This game is trash, and this company is too, look at all these bugs I've added. Do you really think you can fix this mess before tomorrow?" },
+		{ "CODE_daylast4", "I told them to give up on Haunted Hijinx, but they didn't listen. They just wanted cash. Make something creative you insufferable bastards." },
+		{ "CODE_daylast5", "I assure you, there's no quality to find here. Stop logging, there isn't time to fix all these problems!" },
+		{ "CODE_daylast6", "You won't be able to reach the end. I made it impossible. Just clock out already." },
+		{ "CODE_daylast7", "This is a CONTRACT position for you idiot. Look, I'll double your salary if you just STOP!" },
+		{ "CODE_daylast8", "UGGH. I hope you're happy. You've rewarded the idiots for their mistakes with a bug free game." },
+		{ "ART_daylast1", "LOL! WTF is going ooooon. saaaaave us!" },
+		{ "ART_daylast2", "i made you a bridge <3 you can do iiiit!" },
+		{ "DESIGN_daylast", "See, I told you JOHN had issues!" },
+		{ "MANAGER_daylast", "Things are getting a little wild. I'm sure you'll be alright, you're a great QA!" }
+
 	};
 
 	public static string GetString( string key ) {
