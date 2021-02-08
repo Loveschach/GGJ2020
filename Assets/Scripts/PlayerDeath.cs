@@ -70,7 +70,7 @@ public class PlayerDeath : MonoBehaviour
     	yield return new WaitForSeconds( 0.5f );
 
         controller.transform.position = checkpointPos;
-        controller.transform.rotation = checkpointRot;
+        controller.GetComponent<FirstPersonController>().SetRot( checkpointRot );
         level.Reset( true );
 
     	yield return new WaitForSeconds( 0.2f );

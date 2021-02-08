@@ -258,6 +258,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        public void SetRot( Quaternion newRotation ) {
+            m_MouseLook.SetTarget( newRotation );
+		}
 
         private void RotateView()
         {
