@@ -18,6 +18,7 @@ public class TeleportTrigger : MonoBehaviour
  
     	controller.enabled = false;
     	controller.transform.position = teleportOrigin.transform.position;
+        controller.SetRot( teleportOrigin.transform.rotation );
     	yield return new WaitForSeconds(0.05f);
     	controller.enabled = true; 
  	}
