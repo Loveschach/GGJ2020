@@ -10,9 +10,9 @@ public class GameManager : MonoBehaviour
 	static int MAX_DAYS = 5;
 	static int SPLASH_TIMER = 3;
 	static int TUTORIAL_MESSAGE_DURATION = 4;
-	static int LEVEL_TIME = 140;
+	public int HOUR_TIME = 14;
 	static int LEVEL_START_TIME = 8;
-	static int LEVEL_END_TIME = 18;
+	public int LEVEL_END_TIME = 18;
 	public static int CurrentDay = 1;
 	public enum GameState {
 		DAY_SPLASH,
@@ -53,11 +53,16 @@ public class GameManager : MonoBehaviour
 		BugLogged.AddListener( EvaluateBugs );
 	}
 
-	public static string GetTime() {
+	public float GetLevelTime() {
+		return ( LEVEL_END_TIME - LEVEL_START_TIME ) * HOUR_TIME;
+	}
+
+	public string GetTime() {
 		if ( CurrentState == GameState.DAY_SPLASH || CurrentState == GameState.TUTORIAL ) {
 			return LEVEL_START_TIME.ToString( "00" ) + ":00";
 		} else {
-			float percentDone = currentTime / LEVEL_TIME;
+			float levelTime = GetLevelTime();
+			float percentDone = currentTime / levelTime;
 			float timeProgress = ( LEVEL_END_TIME - LEVEL_START_TIME ) * percentDone;
 			string hour = "" + ( Mathf.Floor( timeProgress ) + LEVEL_START_TIME ).ToString( "00" );
 			float minutePercent = timeProgress - Mathf.Floor( timeProgress );
@@ -84,7 +89,8 @@ public class GameManager : MonoBehaviour
 	}
 
 	void UpdateTesting() {
-		float percentDone = currentTime / LEVEL_TIME;
+		float levelTime = GetLevelTime();
+		float percentDone = currentTime / levelTime;
 		float timeProgress = ( LEVEL_END_TIME - LEVEL_START_TIME ) * percentDone;
 		float hour = ( Mathf.Floor( timeProgress ) + LEVEL_START_TIME );
 		if ( hour >= LEVEL_END_TIME ) {

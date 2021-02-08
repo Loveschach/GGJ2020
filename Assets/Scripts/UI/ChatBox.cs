@@ -28,6 +28,7 @@ public class ChatBox : MonoBehaviour
 	public AudioClip[] typingSounds;
 	public AudioSource audioSource;
 	int currentAudioIndex = 0;
+	GameManager gameManager;
 
 	public Sprite[] ProfilePics;
 
@@ -60,6 +61,8 @@ public class ChatBox : MonoBehaviour
 		chatterData[( int )Chatters.ARTIST].title = Strings.GetString( "ARTIST_TITLE" );
 		chatterData[( int )Chatters.ARTIST].pic = ProfilePics[( int )Chatters.ARTIST];
 		currentAudioIndex = 0;
+
+		gameManager = GameObject.FindObjectOfType<GameManager>();
 	}
 
 	public static void QueueText( string text, int duration, Chatters chatter ) {
@@ -146,6 +149,6 @@ public class ChatBox : MonoBehaviour
 			currentTime += Time.deltaTime;
 		}
 
-		time.text = GameManager.GetTime();
+		time.text = gameManager.GetTime();
     }
 }
