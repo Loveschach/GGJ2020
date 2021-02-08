@@ -226,7 +226,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1679.1, y: 458.6}
+  m_SizeDelta: {x: 1724, y: 453.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &194773247
 MonoBehaviour:
@@ -261,17 +261,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Critics hate your game.
+  m_Text: 'Your game is the biggest thing since GYE V!
 
-    It''s basically unplayable because of bugs.
+    No bugs were ever found.
 
-    QA Lead was fired.
+    Adrian J. quit their job and started a succesful indie studio.
 
-    Designer died.
+    xXbsp_mstrXx and drawMe1ofUrFrnchGrlz got married.
 
-    Artist exploded.
-
-    Engineer got a pay raise.'
+    CodeNinja took a sabbatical in Spain and was never seen again.'
 --- !u!222 &194773248
 CanvasRenderer:
   m_ObjectHideFlags: 0

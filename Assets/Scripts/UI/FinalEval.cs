@@ -45,25 +45,18 @@ public class FinalEval : MonoBehaviour
 		Evaluate();
 
 		Text metaText = final.transform.Find( "Rating" ).GetComponent<Text>();
-		if ( totalResolvedBugs >= 11 ) {
-			metaText.text = META_GOOD;
-		}
-		else if ( totalResolvedBugs >= 5 ) {
-			metaText.text = META_OK;
-		}
-		else {
-			metaText.text = META_BAD;
-		}
-
 		Text splash2Text = splash2.transform.Find( "Epilogue" ).GetComponent<Text>();
 		if ( totalResolvedBugs >= 38 ) {
 			splash2Text.text = EPILOGUE_GOOD;
+			metaText.text = META_GOOD;
 		}
 		else if ( totalResolvedBugs >= 30 ) {
 			splash2Text.text = EPILOGUE_OK;
+			metaText.text = META_OK;
 		} 
 		else {
 			splash2Text.text = EPILOGUE_BAD;
+			metaText.text = META_BAD;
 		}
 	}
 
