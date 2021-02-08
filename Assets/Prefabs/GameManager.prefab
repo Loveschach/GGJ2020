@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599c220fa6029324491fe313b10a465a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HOUR_TIME: 20
+  LEVEL_END_TIME: 18
   splashScreen: {fileID: 0}
   playSplash: 1
   playTutorial: 1
@@ -74,6 +76,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LevelAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513406170511235975, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513406170511235975, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
+        type: 3}
+      propertyPath: BypassReverbZones
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4513406170511235975, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8376805200267066897, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
         type: 3}
@@ -139,21 +156,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4513406170511235975, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4513406170511235975, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
-        type: 3}
-      propertyPath: BypassReverbZones
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4513406170511235975, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
-        type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7147075695854140284, guid: 1cf8c1635b35e144f8e0c4b365330cf2,
         type: 3}
