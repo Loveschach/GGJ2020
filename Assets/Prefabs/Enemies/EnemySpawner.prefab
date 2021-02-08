@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2663717546325674267, guid: 0170ee4d301f0294bb07f3e82b0af501,
     type: 3}
-  active: 0
+  active: 1
   spawnRate: 4
   spawnOffset: 0
   count: -1
@@ -105,22 +105,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800002, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800002, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.3726415
@@ -130,8 +114,12 @@ PrefabInstance:
       value: 0.92187726
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800002, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
       propertyPath: m_Color.r
@@ -143,6 +131,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 10800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
       propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.712641
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
@@ -161,26 +161,6 @@ PrefabInstance:
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.712641
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
       value: 0.29383236
@@ -192,6 +172,14 @@ PrefabInstance:
     - target: {fileID: 19800004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
       value: 0.8773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6836f5eaa96f845c4ac0909f84272556, type: 3}
