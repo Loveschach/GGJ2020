@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599c220fa6029324491fe313b10a465a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HOUR_TIME: 20
+  HOUR_TIME: 30
   LEVEL_END_TIME: 18
   splashScreen: {fileID: 0}
   playSplash: 1
