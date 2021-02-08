@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 public class TitleScene : MonoBehaviour
 {
 	static int SPLASH_1_TIME = 3;
-	static int SPLASH_2_TIME = 3;
+	static int SPLASH_2_TIME = 5;
 	public GameObject splash1;
 	public GameObject splash2;
 	public GameObject title;
+	public AudioSource Music;
 	enum TitleState {
 		SPLASH_1,
 		SPLASH_2,
@@ -49,6 +50,7 @@ public class TitleScene : MonoBehaviour
 				if ( currentTime >= SPLASH_2_TIME ) {
 					splash2.SetActive( false );
 					title.SetActive( true );
+					Music.Play();
 					currentState = TitleState.TITLE;
 				}
 				break;
