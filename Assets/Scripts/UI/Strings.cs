@@ -69,7 +69,7 @@ public static class Strings {
 		{ "ART_fixBug_wallBug", "lmao! its in the waaaaallll!" },
 		{ "ART_fixBug_secret", "heeeey that's my little hidden buddy. i guessss ill remove it" },
 		{ "ART_fixBug_friend", "hidden frieeeend! nooooooo my bff...." },
-		{ "DESIGN_fixBug_generic", "UGH why is that bug happening NOW? I bet JOHN overwrote my change. Its fine, I'll fix HIS mistake." },
+		{ "DESIGN_fixBug_generic", "UGH why is that bug happening? I bet JOHN overwrote my change. Its fine, I'll fix HIS mistake." },
 		{ "DESIGN_fixBug_entSpeed", "I TOLD John that those entities were moving oddly! He NEVER listens to me. Now I gotta fix it." },
 		{ "DESIGN_fixBug_unbeatable", "MAN, not being able to beat the level IS a problem. How could JOHN have overlooked something so BAD like that?" },
 		{ "DESIGN_fixBug_killerGeo", "I bet JOHN accidentally clicked on the WRONG thing when he made this thing DEADLY to the player. I'll correct it." },
