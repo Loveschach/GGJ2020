@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class PlayerDeath : MonoBehaviour
 {
 	FirstPersonController controller;
-	Vector3 og_checkpoint;
-	Vector3 checkpoint;
+	Transform og_checkpoint;
+	Transform checkpoint;
 
 	public Image deathScreen;
 	public Image hurtScreen;
@@ -22,7 +22,7 @@ public class PlayerDeath : MonoBehaviour
     void Start()
     {
     	controller = GetComponent<FirstPersonController>();
-        checkpoint = transform.position;
+        checkpoint = transform;
         og_checkpoint = checkpoint;
 		audioSource = GetComponent<AudioSource>();
         level = GameObject.Find( "Level" ).GetComponent<Level>();
@@ -64,7 +64,8 @@ public class PlayerDeath : MonoBehaviour
 
     	yield return new WaitForSeconds( 0.5f );
 
-    	controller.transform.position = checkpoint;
+    	controller.transform.position = checkpoint.position;
+        controller.transform.rotation = checkpoint.rotation;
         level.Reset( true );
 
     	yield return new WaitForSeconds( 0.2f );
@@ -96,7 +97,7 @@ public class PlayerDeath : MonoBehaviour
 
     public Vector3 GetStartPosition()
     {
-        return og_checkpoint;
+        return og_checkpoint.position;
     }
 
     public void Reset()

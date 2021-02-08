@@ -5,12 +5,12 @@ using UnityEngine;
 public class CheckpointTrigger : MonoBehaviour
 {
 	public GameObject checkpointOrigin;
-	public Vector3 checkpoint;
+	public Transform checkpoint;
 
     // Start is called before the first frame update
     void Start()
     {
-        checkpoint = checkpointOrigin.transform.position;
+        checkpoint = checkpointOrigin.transform;
     }
 
     // Update is called once per frame
