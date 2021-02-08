@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 	float tutorialTimer = 0;
 	public GameObject[] BugContainers;
 	public static UnityEvent BugLogged = new UnityEvent();
+	public static UnityEvent TestingStarted = new UnityEvent();
 	GameObject player;
 	bool outOfBoundsPrompted = false;
 	public AudioSource MusicAudio;
@@ -174,6 +175,7 @@ public class GameManager : MonoBehaviour
 	}
 
 	void EnterTesting() {
+		TestingStarted.Invoke();
 		currentTime = 0;
 	}
 

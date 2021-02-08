@@ -27,6 +27,7 @@ public class ChatBox : MonoBehaviour
 	public GameObject chatPanel;
 	public AudioClip[] typingSounds;
 	public AudioSource audioSource;
+	public Animator animator;
 	int currentAudioIndex = 0;
 	GameManager gameManager;
 
@@ -63,6 +64,11 @@ public class ChatBox : MonoBehaviour
 		currentAudioIndex = 0;
 
 		gameManager = GameObject.FindObjectOfType<GameManager>();
+		GameManager.TestingStarted.AddListener( ToFinalPosition );
+	}
+
+	public void ToFinalPosition() {
+		animator.SetTrigger( "ToFinal" );
 	}
 
 	public static void QueueText( string text, int duration, Chatters chatter ) {
