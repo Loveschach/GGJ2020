@@ -7,8 +7,10 @@ using UnityEngine.UI;
 public class PlayerDeath : MonoBehaviour
 {
 	FirstPersonController controller;
-	Transform og_checkpoint;
-	Transform checkpoint;
+	Vector3 og_checkpointPos;
+    Quaternion og_checkpointRot;
+	Vector3 checkpointPos;
+    Quaternion checkpointRot;
 
 	public Image deathScreen;
 	public Image hurtScreen;
@@ -22,8 +24,10 @@ public class PlayerDeath : MonoBehaviour
     void Start()
     {
     	controller = GetComponent<FirstPersonController>();
-        checkpoint = transform;
-        og_checkpoint = checkpoint;
+        checkpointPos = transform.position;
+        og_checkpointPos = checkpointPos;
+        checkpointRot = transform.rotation;
+        og_checkpointRot = checkpointRot;
 		audioSource = GetComponent<AudioSource>();
         level = GameObject.Find( "Level" ).GetComponent<Level>();
     }
@@ -37,7 +41,8 @@ public class PlayerDeath : MonoBehaviour
     	var trigger = other.GetComponent<CheckpointTrigger>();
         if ( trigger != null )
         {
-        	checkpoint = trigger.checkpoint;
+        	checkpointPos = trigger.checkpoint.position;
+            checkpointRot = trigger.checkpoint.rotation;
             level.Checkpoint();
         	return;
         }
@@ -64,8 +69,8 @@ public class PlayerDeath : MonoBehaviour
 
     	yield return new WaitForSeconds( 0.5f );
 
-    	controller.transform.position = checkpoint.position;
-        controller.transform.rotation = checkpoint.rotation;
+        controller.transform.position = checkpointPos;
+        controller.transform.rotation = checkpointRot;
         level.Reset( true );
 
     	yield return new WaitForSeconds( 0.2f );
@@ -97,11 +102,12 @@ public class PlayerDeath : MonoBehaviour
 
     public Vector3 GetStartPosition()
     {
-        return og_checkpoint.position;
+        return og_checkpointPos;
     }
 
     public void Reset()
     {
-        checkpoint = og_checkpoint;
+        checkpointPos = og_checkpointPos;
+        checkpointRot = og_checkpointRot;
     }
 }
