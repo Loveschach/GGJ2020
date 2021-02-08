@@ -29,6 +29,7 @@ public class GameManager : MonoBehaviour
 	float tutorialTimer = 0;
 	public GameObject[] BugContainers;
 	public static UnityEvent BugLogged = new UnityEvent();
+	public static UnityEvent DisableMove = new UnityEvent();
 	public static UnityEvent TestingStarted = new UnityEvent();
 	GameObject player;
 	bool outOfBoundsPrompted = false;
@@ -41,7 +42,7 @@ public class GameManager : MonoBehaviour
 		currentTime = 0;
 		player = GameObject.FindGameObjectWithTag( "Player" );
 		EnterState( GameState.DAY_SPLASH );
-		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b", "TUTORIAL_1c", "TUTORIAL_1d", "TUTORIAL_1e", "TUTORIAL_1g" };
+		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b", "TUTORIAL_1c", "TUTORIAL_1d", "TUTORIAL_1e", "TUTORIAL_1g", "TUTORIAL_1h" };
 		tutorialText.Add( day1TutorialStrings );
 		string[] day2TutorialStrings = { "TUTORIAL_2a", "TUTORIAL_2b", "TUTORIAL_2c", "TUTORIAL_2d" };
 		tutorialText.Add( day2TutorialStrings );
@@ -84,7 +85,11 @@ public class GameManager : MonoBehaviour
 	}
 
 	void UpdateTutorial() {
-		if( !playTutorial || currentTime >= tutorialTimer ) {
+		if( Input.GetButtonDown( "Skip" ) ) {
+			ChatBox.ClearQueue();
+			ChatBox.QueueText( Strings.GetString( "MANAGER_skip" ), TUTORIAL_MESSAGE_DURATION, ChatBox.Chatters.QA_LEAD );
+			EnterState( GameState.TESTING );
+		}	else if( !playTutorial || currentTime >= tutorialTimer ) {
 			EnterState( GameState.TESTING );
 		}
 	}
@@ -110,7 +115,7 @@ public class GameManager : MonoBehaviour
 			GameObject daysRemaining = GameObject.Find( "DaysRemaining" );
 			currentDate.GetComponentInChildren<Text>().text = Strings.GetString( "DATE" + CurrentDay );
 			daysRemaining.GetComponentInChildren<Text>().text = Strings.GetString( "DAYS_REMAINING_" + CurrentDay );
-			player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = false;
+			DisableMove.Invoke();
 		}
 		
 	}
@@ -122,7 +127,6 @@ public class GameManager : MonoBehaviour
 				MusicAudio.Play();
 			}
 
-			player.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().enabled = true;
 			string[] tutorialStrings = tutorialText[CurrentDay - 1];
 			tutorialTimer = 0;
 			foreach( string tutorial in tutorialStrings ) {

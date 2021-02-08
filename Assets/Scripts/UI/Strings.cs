@@ -32,7 +32,8 @@ public static class Strings {
 		{ "TUTORIAL_1d", "We set up some QA specific controls in HH2R. Just hold the right mouse button and click on any bugs you see. The devs will see your report and fix it." },
 		{ "TUTORIAL_1e", "Our JudgeyGame scores is totally dependent on how bug free the game is. Management says if we get less than 80% they'll shut down the studio :E..." },
 		{ "TUTORIAL_1f", "Anyways, sorry to talk your ear off. Don't worry too much about it, just do your job well and you won't get fired." },
-		{ "TUTORIAL_1g", "Everyone leaves at 18:00, so you have til then each day to fix bugs. Talk to you later!" },
+		{ "TUTORIAL_1g", "By the way, if you don't want to talk to me in the morning just press TAB." },
+		{ "TUTORIAL_1h", "Everyone leaves at 18:00, so you have til then each day to fix bugs. Talk to you later!" },
 		{ "TUTORIAL_2a", "Day #2 time to get started!" },
 		{ "TUTORIAL_2b", "How was your first day? I think the game is less buggy now, but it's hard to tell with all the churn." },
 		{ "TUTORIAL_2c", "The environment artists are working on texturing so don't worry about the weird walls. It's a work in progress!" },
@@ -101,7 +102,8 @@ public static class Strings {
 		{ "ART_daylast1", "LOL! WTF is going ooooon. saaaaave us!" },
 		{ "ART_daylast2", "i made you a bridge <3 you can do iiiit!" },
 		{ "DESIGN_daylast", "See, I told you JOHN had issues!" },
-		{ "MANAGER_daylast", "Things are getting a little wild. I'm sure you'll be alright, you're a great QA!" }
+		{ "MANAGER_daylast", "Things are getting a little wild. I'm sure you'll be alright, you're a great QA!" },
+		{ "MANAGER_skip", "You want to skip talking to me today? I hope I wasn't going to say anything imporant ;)" }
 
 	};
 

@@ -41,7 +41,7 @@ public class ChatBox : MonoBehaviour
 	static Queue<ChatMessage> chatQueue = new Queue<ChatMessage>();
 	List<GameObject> chatObjects = new List<GameObject>();
 	float currentTime = 0;
-	bool messagePlaying = false;
+	static bool messagePlaying = false;
 
     // Start is called before the first frame update
     void Start()
@@ -131,6 +131,7 @@ public class ChatBox : MonoBehaviour
 	}
 
 	public static void ClearQueue() {
+		messagePlaying = false;
 		chatQueue.Clear();
 	}
 

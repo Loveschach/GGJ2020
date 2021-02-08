@@ -41,9 +41,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private float m_NextStep;
         private bool m_Jumping;
         private AudioSource m_AudioSource;
+        bool EnableWalk = true;
 
-        // Use this for initialization
-        private void Start()
+		private void Awake() {
+            GameManager.DisableMove.AddListener( DisableMove );
+            GameManager.TestingStarted.AddListener( TestingStarted );
+        }
+		// Use this for initialization
+		private void Start()
         {
             m_CharacterController = GetComponent<CharacterController>();
             m_Camera = Camera.main;
@@ -56,6 +61,14 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_AudioSource = GetComponent<AudioSource>();
 			m_MouseLook.Init(transform , m_Camera.transform);
         }
+
+        void DisableMove() {
+            EnableWalk = false;
+		}
+
+        void TestingStarted() {
+            EnableWalk = true;
+		}
 
 
         // Update is called once per frame
@@ -85,11 +98,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             m_PreviouslyGrounded = m_CharacterController.isGrounded;
 			CharacterUpdate();
-
-			// Temp save and delete testing.
-			if( Input.GetButtonDown( "Fire3" ) ) {
-				SaveSystem.Save();
-			}
 
 			//DEBUG DELETE SAVED
 			if (Input.GetKeyDown(KeyCode.M) && Input.GetKey(KeyCode.RightControl)) {
@@ -140,10 +148,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_MoveDir += Physics.gravity*m_GravityMultiplier*Time.deltaTime;
             }
-            m_CollisionFlags = m_CharacterController.Move(m_MoveDir*Time.deltaTime );
+            if( EnableWalk ) {
+                m_CollisionFlags = m_CharacterController.Move( m_MoveDir * Time.deltaTime );
 
-            ProgressStepCycle(speed);
-            UpdateCameraPosition(speed);
+                ProgressStepCycle( speed );
+                UpdateCameraPosition( speed );
+            }
 
             m_MouseLook.UpdateCursorLock();
         }

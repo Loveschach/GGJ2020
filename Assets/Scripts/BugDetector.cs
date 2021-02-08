@@ -17,9 +17,15 @@ public class BugDetector : MonoBehaviour
 	FirstPersonController player;
 	float originalWalkSpeed = 0;
 	float originalRunSpeed = 0;
+	bool enableDetection = true;
 
 	[SerializeField]
 	Text cursor;
+
+	private void Awake() {
+		GameManager.DisableMove.AddListener( DisableMove );
+		GameManager.TestingStarted.AddListener( TestingStarted );
+	}
 
 	void Start()
 	{
@@ -39,6 +45,14 @@ public class BugDetector : MonoBehaviour
 				}
 			}
 		}
+	}
+
+	void DisableMove() {
+		enableDetection = false;
+	}
+
+	void TestingStarted() {
+		enableDetection = true;
 	}
 
 	void ClearLastHighlight()
@@ -79,6 +93,8 @@ public class BugDetector : MonoBehaviour
 	}
 
 	void Update() {
+		if ( !enableDetection )
+			return;
 
 		//Exit Detective mode
 		if (Input.GetMouseButtonUp(1)) {
