@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
 		currentTime = 0;
 		player = GameObject.FindGameObjectWithTag( "Player" );
 		EnterState( GameState.DAY_SPLASH );
-		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b", "TUTORIAL_1c", "TUTORIAL_1d", "TUTORIAL_1e", "TUTORIAL_1g", "TUTORIAL_1h", "TUTORIAL_1i" };
+		string[] day1TutorialStrings = { "TUTORIAL_1a", "TUTORIAL_1b", "TUTORIAL_1c", "TUTORIAL_1d", "TUTORIAL_1e", "TUTORIAL_1g" };
 		tutorialText.Add( day1TutorialStrings );
-		string[] day2TutorialStrings = { "TUTORIAL_2a", "TUTORIAL_2b", "TUTORIAL_2c", "TUTORIAL_2d", "TUTORIAL_2e" };
+		string[] day2TutorialStrings = { "TUTORIAL_2a", "TUTORIAL_2b", "TUTORIAL_2c", "TUTORIAL_2d" };
 		tutorialText.Add( day2TutorialStrings );
-		string[] day3TutorialStrings = { "TUTORIAL_3a", "TUTORIAL_3b", "TUTORIAL_3c", "TUTORIAL_3d" };
+		string[] day3TutorialStrings = { "TUTORIAL_3a", "TUTORIAL_3b", "TUTORIAL_3c" };
 		tutorialText.Add( day3TutorialStrings );
 		string[] day4TutorialStrings = { "TUTORIAL_4a", "TUTORIAL_4b", "TUTORIAL_4c" };
 		tutorialText.Add( day4TutorialStrings );
