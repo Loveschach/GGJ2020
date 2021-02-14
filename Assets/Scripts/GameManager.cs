@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour
 		string[] day5TutorialStrings = { "TUTORIAL_5a", "TUTORIAL_5b", "TUTORIAL_5c", "TUTORIAL_5d" };
 		tutorialText.Add( day5TutorialStrings );
 		BugLogged.AddListener( EvaluateBugs );
+		if( CurrentDay == 1 ) {
+			SaveSystem.Delete();
+		}
 	}
 
 	public float GetLevelTime() {
