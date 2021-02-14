@@ -42,7 +42,7 @@ public static class Strings {
 		{ "TUTORIAL_3b", "Boss man screamed at me for like 2 hours. He says the investors are concerned HH2R is going to underperform." },
 		{ "TUTORIAL_3c", "He says we're not hitting our quotas, but don't worry I can take the blame. Juuuust try to find a lot of bugs today, okay?" },
 		{ "TUTORIAL_4a", "I'm not sure if I'll have my job here for much longer." },
-		{ "TUTORIAL_4b", "Don't worry, I'm sure your new lead will be super nice and better than me at management. At least the game has music now I guess." },
+		{ "TUTORIAL_4b", "Don't worry, I'm sure your new lead will be super nice and better than me at management." },
 		{ "TUTORIAL_4c", "Try not to forget me when you become a game dev superstar, yea?" },
 		{ "TUTORIAL_5a", "Something weird is going on today. It seems like there are a lot of new bugs?" },
 		{ "TUTORIAL_5b", "Boss says they won't get rid of me as long as the game ships in a solid state. Let's try to clean up this mess." },

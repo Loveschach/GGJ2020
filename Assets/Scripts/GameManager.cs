@@ -126,7 +126,7 @@ public class GameManager : MonoBehaviour
 	void EnterTutorial() {
 		if ( playTutorial )
 		{
-			if( CurrentDay >= 3 ) {
+			if( CurrentDay >= 2 ) {
 				MusicAudio.Play();
 			}
 
