@@ -123,11 +123,7 @@ public class ChatBox : MonoBehaviour
 	}
 
 	void PlayNextTypingSound() {
-		Utils.PlayRandomAudio( audioSource, typingSounds );
-		currentAudioIndex++;
-		if ( currentAudioIndex >= typingSounds.Length ) {
-			currentAudioIndex = 0;
-		}
+		audioSource.Play();
 	}
 
 	public static void ClearQueue() {
